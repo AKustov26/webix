@@ -1,24 +1,16 @@
 <script setup lang="ts">
-import {defineProps, toRefs} from "vue";
+import { defineProps } from "vue";
 // props
 const props = defineProps({
-	name: String,
+	data: Object,
 	value: String
 });
-console.log(props);
-const {value} = toRefs(props);
 </script>
 <template>
   <div class="item">
-    <i>
-	    {{ value }}
-    </i>
-    <div class="details">
-      <h3>
-        <slot name="heading"></slot>
-      </h3>
-      <slot></slot>
-    </div>
+	  <a href="#" class="webix-image-link" >
+		  <img class="webix-product-photo" :src="props.value" :alt="props.data.name" />
+	  </a>
   </div>
 </template>
 

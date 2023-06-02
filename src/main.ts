@@ -16,7 +16,6 @@ const app = createApp(App)
 app.use(createPinia())
 app.use(router)
 
-
 registerWebixUIComponent(app);
 
 app.mount('#app')

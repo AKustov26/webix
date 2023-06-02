@@ -1,20 +1,18 @@
-interface IFavoriteItem {
-    productWbId: string, // артикул
-    isFavorite: boolean, // избранное
-}
 export default {
-    setLocalStorage(key: string, data: string[]): void {
+    setLocalStorage<T>(key: string, data: T): void {
         localStorage.setItem(key, JSON.stringify(data));
     },
-    getLocalStorage(key: string): string[] {
-        const storage_value: string | null = localStorage.getItem(key);
-
-        if (storage_value) {
-            return JSON.parse(storage_value);
+    getLocalStorage<T>(key: string): T | [] {
+        const storage: string | null = localStorage.getItem(key);
+        if (storage) {
+            let storageParseValue: [] = [];
+            try {
+                storageParseValue = JSON.parse(storage)
+            } catch (e) {
+                console.log("Не удалось прочитать данные из локального хранилища", e)
+            }
+            return storageParseValue;
         }
-        return [""];
-        // if (storage_value) {
-        //     let
-        // }
+        return [];
     }
 }
