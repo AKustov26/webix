@@ -6,7 +6,7 @@ import {useStateTableStore} from "@/stores/stateTableBrandItems";
 import {onMounted, ref} from "vue";
 import localstorage from "@/modules/tableBrandItems/helper/localstorage";
 import SettingsTable from "@/modules/tableBrandItems/components/settingsTable.vue";
-
+import useValidation from "@/modules/tableBrandItems/helper/customFilters"
 const renderFavoriteButton = function (data): string {
 	return `
 		<span class="webix-favorite">
@@ -39,12 +39,14 @@ const stateTable = useStateTableStore();
 const tableData: ITableData[] = table_data;
 const favoriteProducts: string[] = localstorage.getLocalStorage<string[]>("favoriteProducts");
 
+// const { options } = useValidation();
 // ToDo вынести в функцию store table - меняем состояние в таблице
 const setFavoriteProductsTable = () => {
 	for (let i = 0; i < favoriteProducts.length; i++) {
 		let favoriteProduct = favoriteProducts[i];
 		for (let q = 0; q < tableData.length; q++) {
 			if (tableData[q].productWbId === favoriteProduct) {
+				console.log(tableData[q]);
 				tableData[q].isFavorite = true;
 				break;
 			}
@@ -52,6 +54,8 @@ const setFavoriteProductsTable = () => {
 	}
 }
 setFavoriteProductsTable();
+
+webix.i18n.setLocale("ru-RU");
 
 // ToDo перенести options в отдельный файл
 const options = {
@@ -125,12 +129,15 @@ const options = {
 			editor: "string",
 			sort: "string",
 			header: [
-				"Товар",
-				{
-					content:"customFilterName",
-					compare: startCompare
-				}
+				{ text: "Товар", content: "excelFilter", mode: "text"}
 			],
+			// header: [
+			// 	"Товар",
+			// 	{
+			// 		content:"customFilterName",
+			// 		// compare: startCompare
+			// 	}
+			// ],
 		},
 		{
 			id: "supplier",
@@ -148,7 +155,15 @@ const options = {
 			id: "lastRemains",
 			editor: "number",
 			sort: "int",
-			header: "Остаток",
+			// header: [
+			// 	"Остаток",
+			// 	{
+			// 		content: "customFilterName2"
+			// 	}
+			// ],
+			header: [
+				{ text: "Остаток", content: "excelFilter", mode: "number"}
+			],
 		},
 		{
 			id: "reviewsCount",
@@ -184,91 +199,132 @@ const options = {
 	},
 };
 
-function startCompare(value, filter){
-	value = value.toString().toLowerCase();
-	filter = filter.toString().toLowerCase();
-	console.log(value);
-	console.log(filter);
-	return value.indexOf(filter) === 0;
-}
-
 // webix.ui.datafilter.customFilterName = {
 // 	getInputNode:function(node){
-// 		return node.firstChild ? node.firstChild : {
-// 			indeterminate:true
-// 		};
+// 		return node && node.querySelector("input") ? node.querySelector("input") : { value:"" };
+// 		// return node ? node.querySelector("input") : { value:"" };
+// 	},
+// 	setValue:function(node, value){
+// 		this.getInputNode(node).value = value.toString();
+// 	},
+// 	// returns filtering parameter
+// 	getValue:function(node){
+// 		console.log(this.getInputNode(node));
+// 		console.log(this.getInputNode(node).value);
+// 		// console.log(this.getInputNode(node))
+// 		return this.getInputNode(node).value;
+// 	},
+// 	refresh: function(master, node, column){
+// 		// declare a built-in datatable filter
+// 		master.registerFilter(node, column, this);
+//
+// 		// column.compare = column.compare || function(value, filter){
+// 		//   console.log(value);
+// 		//   console.log(filter);
+// 		// };
+//     // event which will trigger filtering
+// 		if (node.querySelector("input")) {
+// 			node.querySelector("input").onkeyup = function(){
+// 				master.filterByAll()
+// 			}
+// 		}
+//
+// 		// node.querySelector("button").onclick = function(){
+// 		// 	master.filterByAll()
+// 		// }
+// 	},
+// 	render:function(master, column){
+// 		if (!column.popup) {
+// 			const popup = this.createPopup(column);
+//
+// 			master.attachEvent('onScrollX', () => popup.hide());
+// 			column.popup = popup.config.id;
+//
+// 			master._destroy_with_me.push(popup);
+// 		}
+// 		// const html = "<div><input type='text' style='width:100%' id='cb1'></div>";
+// 		return `<span class="webix_excel_filter webix_icon wxi-filter">123</span>`;
+// 		// return html;
+// 	},
+// 	createPopup(config) {
+// 		const htmlString = `
+//                     <div class="webix_popup_body">
+//                         <div class="filter-input-group">
+//                             <input placeholder="${config.placeholder || 'Поиск'}" type="text" class="filter-input">
+//                             <span class="e-icon e-icon-search filter-input-submit"></span>
+//                         </div>
+//                     </div>
+//                 `;
+// 		const dom = new DOMParser().parseFromString(htmlString, 'text/html');
+//
+// 		return webix.ui({
+// 			view: 'popup',
+// 			css: 'webix_popup_eggheads',
+// 			body: {
+// 				content: dom.body.firstChild,
+// 				type: 'clean',
+// 				height: 48,
+// 			},
+// 		});
+// 	},
+// };
+// webix.ui.datafilter.customFilterName2 = {
+// 	// getInputNode:function(node){
+// 	// 	return node ? node.querySelector("input") : { value:"" };
+// 	// },
+// 	setValue:function(node, value){
+// 		const minNode = node.querySelector('#from1');
+// 		const maxNode = node.querySelector('#to1');
+// 		const [minNodeValue = '', maxNodeValue = ''] = value || [];
+//
+// 		minNode.value = minNodeValue;
+// 		maxNode.value = maxNodeValue;
 // 	},
 // 	getValue:function(node){
-// 		var value = this.getInputNode(node).checked;
-// 		var three = this.getInputNode(node).indeterminate;
-// 		// console.log(three);
-// 		// console.log(value);
-// 		// console.log(node);
-// 		return three ? "thirdState" : value;
+// 		const min = node.querySelector('#from1');
+// 		const max = node.querySelector('#to1');
+// 		return min.value === '' && max.value === '' ? null : [min.value, max.value];
 // 	},
-// 	_stateSetter:function(e){
-// 		if (this.readOnly)
-// 			this.checked=this.readOnly=false;
-// 		else if (!this.checked)
-// 			this.readOnly=this.indeterminate=true;
+// 	compare(cellValue, filterValue) {
+// 		if (!Array.isArray(filterValue)) {
+// 			return true;
+// 		}
+//
+// 		const min = Number(filterValue[0]);
+// 		const max = Number(filterValue[1]);
+//
+// 		return (
+// 			(filterValue[0] === '' || min <= cellValue)
+// 			&& (filterValue[1] === '' || cellValue <= max)
+// 		);
 // 	},
-// 	refresh: function(master, node, columnObj){
-// 		master.registerFilter(node, columnObj, this);
-// 		var input = node.querySelector("input");
-// 		input.onclick = this._stateSetter;
-// 		input.indeterminate = true;
-// 		input.onchange = function(){
+// 	refresh: function(master, node, column){
+// 		master.registerFilter(node, column, this);
+// 		column.compare = column.compare || this.compare;
+//
+// 		node.querySelector("button").onclick = function(){
 // 			master.filterByAll()
 // 		}
 // 	},
 // 	render:function(master, column){
-// 		var html = "<input type='text' id='cb1'>";
+// 		const html = `
+// 			<div>
+// 				<label for="from1">От</label>
+// 				<input type='text' style='width:100%' id='from1'>
+// 				<label for="to1">До</label>
+// 				<input type='text' style='width:100%' id='to1'>
+// 				<button>Применить</button>
+// 			</div>
+// `;
 // 		return html;
 // 	}
-// }
-
-webix.ui.datafilter.customFilterName = {
-	getInputNode:function(node){
-		return node ? node.firstChild : { value:"" };
-	},
-	setValue:function(node, value){
-		this.getInputNode(node).value = value.toString();
-	},
-	// returns filtering parameter
-	getValue:function(node){
-		console.log(this.getInputNode(node))
-		return this.getInputNode(node).value;
-	},
-	refresh: function(master, node, columnObj){
-		// declare a built-in datatable filter
-		master.registerFilter(node, columnObj, this);
-		// event which will trigger filtering
-		// node.querySelector("input").onkeyup = function(){
-		// 	master.filterByAll()
-		// }
-		node.querySelector("button").onclick = function(){
-			master.filterByAll()
-		}
-	},
-	render:function(master, column){
-		var html =
-			`
-				<div>
-					<input type='text' style='width:100%' id='cb1'>
-					<button>Применить</button>
-				</div>
-			`;
-		return html;
-	}
-};
+// };
 
 onMounted(() => {
 	webix.ready(function(){
+
 		// ToDo описать
 		stateTable.putStateTable($$("dt2").getState());
-
-		// ToDo фильтр по избранному
-
 
 		// // ToDo фильтр по избранному
 		$$("dt2").registerFilter(
