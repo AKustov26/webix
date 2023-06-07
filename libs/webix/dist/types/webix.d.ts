@@ -401,7 +401,7 @@ interface DataCollectionConfig{
 	scheme?: any;
 	url?: any;
 }
-type DataCollectionEventName ='onAfterAdd'|'onAfterCursorChange'|'onAfterDelete'|'onAfterLoad'|'onAfterSort'|'onBeforeAdd'|'onBeforeCursorChange'|'onBeforeDelete'|'onBeforeLoad'|'onBeforeSort'|'onBindRequest'|'onBindUpdate'|'onDataRequest'|'onDataUpdate'|'onDestruct'|'onLoadError'|'onValidationError'|'onValidationSuccess';
+type DataCollectionEventName ="onAfterAdd"|"onAfterCursorChange"|"onAfterDelete"|"onAfterLoad"|"onAfterSort"|"onBeforeAdd"|"onBeforeCursorChange"|"onBeforeDelete"|"onBeforeLoad"|"onBeforeSort"|"onBindRequest"|"onBindUpdate"|"onDataRequest"|"onDataUpdate"|"onDestruct"|"onLoadError"|"onValidationError"|"onValidationSuccess";
 interface DataCollectionFactory {
 	new (config?: DataCollectionConfig): DataCollection;
 }
@@ -516,7 +516,7 @@ interface DataRecordConfig{
 	on?: EventHash;
 	url?: any;
 }
-type DataRecordEventName ='onAfterLoad'|'onBeforeLoad'|'onBindRequest'|'onChange'|'onLoadError';
+type DataRecordEventName ="onAfterLoad"|"onBeforeLoad"|"onBindRequest"|"onChange"|"onLoadError";
 interface DataRecordFactory {
 	new (config?: DataRecordConfig): DataRecord;
 }
@@ -599,7 +599,7 @@ interface DataValueConfig{
 	on?: EventHash;
 	value?: string|number;
 }
-type DataValueEventName ='onBindRequest'|'onChange';
+type DataValueEventName ="onBindRequest"|"onChange";
 interface DataValueFactory {
 	new (config?: DataValueConfig): DataValue;
 }
@@ -969,7 +969,7 @@ interface TreeCollectionConfig{
 	scheme?: any;
 	url?: any;
 }
-type TreeCollectionEventName ='onAfterAdd'|'onAfterCursorChange'|'onAfterDelete'|'onAfterLoad'|'onAfterSort'|'onBeforeAdd'|'onBeforeCursorChange'|'onBeforeDelete'|'onBeforeLoad'|'onBeforeSort'|'onBindRequest'|'onBindUpdate'|'onDataRequest'|'onDataUpdate'|'onDestruct'|'onLoadError'|'onValidationError'|'onValidationSuccess';
+type TreeCollectionEventName ="onAfterAdd"|"onAfterCursorChange"|"onAfterDelete"|"onAfterLoad"|"onAfterSort"|"onBeforeAdd"|"onBeforeCursorChange"|"onBeforeDelete"|"onBeforeLoad"|"onBeforeSort"|"onBindRequest"|"onBindUpdate"|"onDataRequest"|"onDataUpdate"|"onDestruct"|"onLoadError"|"onValidationError"|"onValidationSuccess";
 interface TreeCollectionFactory {
 	new (config?: TreeCollectionConfig): TreeCollection;
 }
@@ -1168,7 +1168,7 @@ interface baselayoutConfig{
 	visibleBatch?: string;
 	width?: number;
 }
-type baselayoutEventName ='onBindRequest'|'onDestruct'|'onViewShow';
+type baselayoutEventName ="onBindRequest"|"onDestruct"|"onViewShow";
 export class baselayout implements webix.ui.baseview{
 	addView(view:any, index?:number):string|number;
 	adjust():void;
@@ -1231,7 +1231,7 @@ interface baseviewConfig{
 	minWidth?: number;
 	width?: number;
 }
-type baseviewEventName ='onBindRequest'|'onDestruct'|'onViewShow';
+type baseviewEventName ="onBindRequest"|"onDestruct"|"onViewShow";
 export interface baseview{
 	adjust():void;
 	bind(target:any, rule?:WebixCallback, format?:string):void;
@@ -1283,7 +1283,7 @@ interface jetappConfig{
 	override?: any[];
 	width?: number;
 }
-type jetappEventName ='onAfterScroll'|'onBlur'|'onDestruct'|'onEnter'|'onFocus'|'onInit'|'onLongTouch'|'onSwipeX'|'onSwipeY'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type jetappEventName ="onAfterScroll"|"onBlur"|"onDestruct"|"onEnter"|"onFocus"|"onInit"|"onLongTouch"|"onSwipeX"|"onSwipeY"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class jetapp implements webix.ui.baseview{
 	adjust():void;
 	attachEvent(type:jetappEventName, functor:WebixCallback, id?:string):string|number;
@@ -1357,7 +1357,7 @@ interface protoConfig{
 	url?: any;
 	width?: number;
 }
-type protoEventName ='onAfterAdd'|'onAfterDelete'|'onAfterLoad'|'onAfterRender'|'onAfterScroll'|'onAfterSort'|'onBeforeAdd'|'onBeforeDelete'|'onBeforeLoad'|'onBeforeRender'|'onBeforeSort'|'onBindRequest'|'onBlur'|'onDataRequest'|'onDataUpdate'|'onDestruct'|'onEnter'|'onFocus'|'onItemRender'|'onKeyPress'|'onLoadError'|'onLongTouch'|'onSwipeX'|'onSwipeY'|'onTabFocus'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onValidationError'|'onValidationSuccess'|'onViewResize'|'onViewShow';
+type protoEventName ="onAfterAdd"|"onAfterDelete"|"onAfterLoad"|"onAfterRender"|"onAfterScroll"|"onAfterSort"|"onBeforeAdd"|"onBeforeDelete"|"onBeforeLoad"|"onBeforeRender"|"onBeforeSort"|"onBindRequest"|"onBlur"|"onDataRequest"|"onDataUpdate"|"onDestruct"|"onEnter"|"onFocus"|"onItemRender"|"onKeyPress"|"onLoadError"|"onLongTouch"|"onSwipeX"|"onSwipeY"|"onTabFocus"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onValidationError"|"onValidationSuccess"|"onViewResize"|"onViewShow";
 export class proto implements webix.ui.baseview{
 	add(obj:any, index?:number):string|number;
 	addCss(id:string|number, css:string, silent?:boolean):void;
@@ -1453,7 +1453,7 @@ interface resizeareaConfig{
 	start?: number;
 	width?: number;
 }
-type resizeareaEventName ='onResize'|'onResizeEnd';
+type resizeareaEventName ="onResize"|"onResizeEnd";
 export interface resizearea{
 	attachEvent(type:resizeareaEventName, functor:WebixCallback, id?:string):string|number;
 	blockEvent():void;
@@ -1485,7 +1485,7 @@ interface viewConfig{
 	minWidth?: number;
 	width?: number;
 }
-type viewEventName ='onAfterScroll'|'onBindRequest'|'onBlur'|'onDestruct'|'onEnter'|'onFocus'|'onKeyPress'|'onLongTouch'|'onSwipeX'|'onSwipeY'|'onTabFocus'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type viewEventName ="onAfterScroll"|"onBindRequest"|"onBlur"|"onDestruct"|"onEnter"|"onFocus"|"onKeyPress"|"onLongTouch"|"onSwipeX"|"onSwipeY"|"onTabFocus"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class view implements webix.ui.baseview{
 	adjust():void;
 	bind(target:any, rule?:WebixCallback, format?:string):void;
@@ -1531,7 +1531,7 @@ interface vscrollConfig{
 	scrollWidth?: number;
 	zoom?: number;
 }
-type vscrollEventName ='onScroll';
+type vscrollEventName ="onScroll";
 export interface vscroll{
 	activeArea(node:HTMLElement):void;
 	attachEvent(type:vscrollEventName, functor:WebixCallback, id?:string):string|number;
@@ -1575,7 +1575,7 @@ interface abslayoutConfig{
 	visibleBatch?: string;
 	width?: number;
 }
-type abslayoutEventName ='onBindRequest'|'onDestruct'|'onViewShow';
+type abslayoutEventName ="onBindRequest"|"onDestruct"|"onViewShow";
 export class abslayout implements webix.ui.baseview{
 	addView(view:any, index?:number):string|number;
 	adjust():void;
@@ -1650,7 +1650,7 @@ interface accordionConfig{
 	visibleBatch?: string;
 	width?: number;
 }
-type accordionEventName ='onAfterCollapse'|'onAfterExpand'|'onBindRequest'|'onDestruct'|'onViewShow';
+type accordionEventName ="onAfterCollapse"|"onAfterExpand"|"onBindRequest"|"onDestruct"|"onViewShow";
 export class accordion implements webix.ui.baseview{
 	addView(view:any, index?:number):string|number;
 	adjust():void;
@@ -1726,7 +1726,7 @@ interface accordionitemConfig{
 	onMouseMove?: WebixCallback;
 	width?: number;
 }
-type accordionitemEventName ='onAfterContextMenu'|'onAfterScroll'|'onBeforeContextMenu'|'onBindRequest'|'onBlur'|'onDestruct'|'onEnter'|'onFocus'|'onItemClick'|'onItemDblClick'|'onKeyPress'|'onLongTouch'|'onMouseMove'|'onMouseMoving'|'onMouseOut'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type accordionitemEventName ="onAfterContextMenu"|"onAfterScroll"|"onBeforeContextMenu"|"onBindRequest"|"onBlur"|"onDestruct"|"onEnter"|"onFocus"|"onItemClick"|"onItemDblClick"|"onKeyPress"|"onLongTouch"|"onMouseMove"|"onMouseMoving"|"onMouseOut"|"onSwipeX"|"onSwipeY"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class accordionitem implements webix.ui.baseview{
 	adjust():void;
 	attachEvent(type:accordionitemEventName, functor:WebixCallback, id?:string):string|number;
@@ -1796,7 +1796,7 @@ interface alignConfig{
 	top?: number;
 	width?: number;
 }
-type alignEventName ='onAfterScroll'|'onBindRequest'|'onBlur'|'onDestruct'|'onEnter'|'onFocus'|'onKeyPress'|'onLongTouch'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type alignEventName ="onAfterScroll"|"onBindRequest"|"onBlur"|"onDestruct"|"onEnter"|"onFocus"|"onKeyPress"|"onLongTouch"|"onSwipeX"|"onSwipeY"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class align implements webix.ui.baseview{
 	adjust():void;
 	bind(target:any, rule?:WebixCallback, format?:string):void;
@@ -1854,7 +1854,7 @@ interface barcodeConfig{
 	value?: string;
 	width?: number;
 }
-type barcodeEventName ='onAfterScroll'|'onBindRequest'|'onBlur'|'onDestruct'|'onEnter'|'onFocus'|'onKeyPress'|'onLongTouch'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type barcodeEventName ="onAfterScroll"|"onBindRequest"|"onBlur"|"onDestruct"|"onEnter"|"onFocus"|"onKeyPress"|"onLongTouch"|"onSwipeX"|"onSwipeY"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class barcode implements webix.ui.baseview{
 	adjust():void;
 	bind(target:any, rule?:WebixCallback, format?:string):void;
@@ -1925,7 +1925,7 @@ interface bulletConfig{
 	value?: number;
 	width?: number;
 }
-type bulletEventName ='onAfterScroll'|'onBindRequest'|'onBlur'|'onDestruct'|'onEnter'|'onFocus'|'onKeyPress'|'onLongTouch'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type bulletEventName ="onAfterScroll"|"onBindRequest"|"onBlur"|"onDestruct"|"onEnter"|"onFocus"|"onKeyPress"|"onLongTouch"|"onSwipeX"|"onSwipeY"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class bullet implements webix.ui.baseview{
 	adjust():void;
 	bind(target:any, rule?:WebixCallback, format?:string):void;
@@ -1995,7 +1995,7 @@ interface buttonConfig{
 	value?: string|number;
 	width?: number;
 }
-type buttonEventName ='onAfterRender'|'onAfterScroll'|'onBeforeRender'|'onBindRequest'|'onBlur'|'onChange'|'onDestruct'|'onEnter'|'onFocus'|'onItemClick'|'onKeyPress'|'onLongTouch'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type buttonEventName ="onAfterRender"|"onAfterScroll"|"onBeforeRender"|"onBindRequest"|"onBlur"|"onChange"|"onDestruct"|"onEnter"|"onFocus"|"onItemClick"|"onKeyPress"|"onLongTouch"|"onSwipeX"|"onSwipeY"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class button implements webix.ui.baseview{
 	adjust():void;
 	attachEvent(type:buttonEventName, functor:WebixCallback, id?:string):string|number;
@@ -2104,7 +2104,7 @@ interface calendarConfig{
 	weekNumber?: boolean;
 	width?: number;
 }
-type calendarEventName ='onAfterContextMenu'|'onAfterDateSelect'|'onAfterMonthChange'|'onAfterRender'|'onAfterScroll'|'onAfterZoom'|'onBeforeContextMenu'|'onBeforeDateSelect'|'onBeforeMonthChange'|'onBeforeRender'|'onBeforeZoom'|'onBindRequest'|'onBlur'|'onChange'|'onDateClear'|'onDateSelect'|'onDestruct'|'onEnter'|'onFocus'|'onItemClick'|'onItemDblClick'|'onKeyPress'|'onLongTouch'|'onMouseMove'|'onMouseMoving'|'onMouseOut'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTodaySet'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type calendarEventName ="onAfterContextMenu"|"onAfterDateSelect"|"onAfterMonthChange"|"onAfterRender"|"onAfterScroll"|"onAfterZoom"|"onBeforeContextMenu"|"onBeforeDateSelect"|"onBeforeMonthChange"|"onBeforeRender"|"onBeforeZoom"|"onBindRequest"|"onBlur"|"onChange"|"onDateClear"|"onDateSelect"|"onDestruct"|"onEnter"|"onFocus"|"onItemClick"|"onItemDblClick"|"onKeyPress"|"onLongTouch"|"onMouseMove"|"onMouseMoving"|"onMouseOut"|"onSwipeX"|"onSwipeY"|"onTimedKeyPress"|"onTodaySet"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class calendar implements webix.ui.baseview{
 	adjust():void;
 	attachEvent(type:calendarEventName, functor:WebixCallback, id?:string):string|number;
@@ -2181,7 +2181,7 @@ interface carouselConfig{
 	type?: string;
 	width?: number;
 }
-type carouselEventName ='onAfterScroll'|'onBindRequest'|'onBlur'|'onDestruct'|'onEnter'|'onFocus'|'onKeyPress'|'onLongTouch'|'onShow'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type carouselEventName ="onAfterScroll"|"onBindRequest"|"onBlur"|"onDestruct"|"onEnter"|"onFocus"|"onKeyPress"|"onLongTouch"|"onShow"|"onSwipeX"|"onSwipeY"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class carousel implements webix.ui.baseview{
 	addView(view:any, index?:number):string|number;
 	adjust():void;
@@ -2304,7 +2304,7 @@ interface chartConfig{
 	yAxis?: any;
 	yValue?: string;
 }
-type chartEventName ='onAfterAdd'|'onAfterContextMenu'|'onAfterDelete'|'onAfterLoad'|'onAfterRender'|'onAfterScroll'|'onAfterSort'|'onBeforeAdd'|'onBeforeContextMenu'|'onBeforeDelete'|'onBeforeLoad'|'onBeforeRender'|'onBeforeSort'|'onBindRequest'|'onBlur'|'onDataRequest'|'onDataUpdate'|'onDestruct'|'onEnter'|'onFocus'|'onItemClick'|'onItemDblClick'|'onKeyPress'|'onLegendClick'|'onLoadError'|'onLongTouch'|'onMouseMove'|'onMouseMoving'|'onMouseOut'|'onSwipeX'|'onSwipeY'|'onTabFocus'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type chartEventName ="onAfterAdd"|"onAfterContextMenu"|"onAfterDelete"|"onAfterLoad"|"onAfterRender"|"onAfterScroll"|"onAfterSort"|"onBeforeAdd"|"onBeforeContextMenu"|"onBeforeDelete"|"onBeforeLoad"|"onBeforeRender"|"onBeforeSort"|"onBindRequest"|"onBlur"|"onDataRequest"|"onDataUpdate"|"onDestruct"|"onEnter"|"onFocus"|"onItemClick"|"onItemDblClick"|"onKeyPress"|"onLegendClick"|"onLoadError"|"onLongTouch"|"onMouseMove"|"onMouseMoving"|"onMouseOut"|"onSwipeX"|"onSwipeY"|"onTabFocus"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class chart implements webix.ui.baseview{
 	add(obj:any, index?:number):string|number;
 	addSeries(obj:any):void;
@@ -2417,7 +2417,7 @@ interface chatConfig{
 	userId?: number;
 	width?: number;
 }
-type chatEventName ='onAfterScroll'|'onBindRequest'|'onBlur'|'onDestruct'|'onEnter'|'onFocus'|'onInit'|'onKeyPress'|'onLongTouch'|'onSwipeX'|'onSwipeY'|'onTabFocus'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type chatEventName ="onAfterScroll"|"onBindRequest"|"onBlur"|"onDestruct"|"onEnter"|"onFocus"|"onInit"|"onKeyPress"|"onLongTouch"|"onSwipeX"|"onSwipeY"|"onTabFocus"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class chat implements webix.ui.baseview{
 	adjust():void;
 	app(app:any):void;
@@ -2508,7 +2508,7 @@ interface checkboxConfig{
 	value?: string|number|boolean;
 	width?: number;
 }
-type checkboxEventName ='onAfterRender'|'onAfterScroll'|'onBeforeRender'|'onBindRequest'|'onBlur'|'onChange'|'onDestruct'|'onEnter'|'onFocus'|'onItemClick'|'onKeyPress'|'onLongTouch'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type checkboxEventName ="onAfterRender"|"onAfterScroll"|"onBeforeRender"|"onBindRequest"|"onBlur"|"onChange"|"onDestruct"|"onEnter"|"onFocus"|"onItemClick"|"onKeyPress"|"onLongTouch"|"onSwipeX"|"onSwipeY"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class checkbox implements webix.ui.baseview{
 	adjust():void;
 	attachEvent(type:checkboxEventName, functor:WebixCallback, id?:string):string|number;
@@ -2623,7 +2623,7 @@ interface checksuggestConfig{
 	width?: number;
 	zIndex?: number;
 }
-type checksuggestEventName ='onAfterScroll'|'onBeforeShow'|'onBindRequest'|'onBlur'|'onDestruct'|'onEnter'|'onFocus'|'onHide'|'onKeyPress'|'onLongTouch'|'onShow'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onValueSuggest'|'onViewMove'|'onViewMoveEnd'|'onViewResize'|'onViewShow';
+type checksuggestEventName ="onAfterScroll"|"onBeforeShow"|"onBindRequest"|"onBlur"|"onDestruct"|"onEnter"|"onFocus"|"onHide"|"onKeyPress"|"onLongTouch"|"onShow"|"onSwipeX"|"onSwipeY"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onValueSuggest"|"onViewMove"|"onViewMoveEnd"|"onViewResize"|"onViewShow";
 export class checksuggest implements webix.ui.baseview{
 	adjust():void;
 	attachEvent(type:checksuggestEventName, functor:WebixCallback, id?:string):string|number;
@@ -2709,7 +2709,7 @@ interface colorboardConfig{
 	value?: string;
 	width?: number;
 }
-type colorboardEventName ='onAfterRender'|'onAfterScroll'|'onBeforeRender'|'onBindRequest'|'onBlur'|'onDestruct'|'onEnter'|'onFocus'|'onKeyPress'|'onLongTouch'|'onSelect'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type colorboardEventName ="onAfterRender"|"onAfterScroll"|"onBeforeRender"|"onBindRequest"|"onBlur"|"onDestruct"|"onEnter"|"onFocus"|"onKeyPress"|"onLongTouch"|"onSelect"|"onSwipeX"|"onSwipeY"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class colorboard implements webix.ui.baseview{
 	adjust():void;
 	attachEvent(type:colorboardEventName, functor:WebixCallback, id?:string):string|number;
@@ -2807,7 +2807,7 @@ interface colorpickerConfig{
 	value?: string|number;
 	width?: number;
 }
-type colorpickerEventName ='onAfterRender'|'onAfterScroll'|'onBeforeRender'|'onBindRequest'|'onBlur'|'onChange'|'onDestruct'|'onEnter'|'onFocus'|'onItemClick'|'onKeyPress'|'onLongTouch'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type colorpickerEventName ="onAfterRender"|"onAfterScroll"|"onBeforeRender"|"onBindRequest"|"onBlur"|"onChange"|"onDestruct"|"onEnter"|"onFocus"|"onItemClick"|"onKeyPress"|"onLongTouch"|"onSwipeX"|"onSwipeY"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class colorpicker implements webix.ui.baseview{
 	adjust():void;
 	attachEvent(type:colorpickerEventName, functor:WebixCallback, id?:string):string|number;
@@ -2894,7 +2894,7 @@ interface colorselectConfig{
 	value?: string;
 	width?: number;
 }
-type colorselectEventName ='onAfterRender'|'onAfterScroll'|'onBeforeRender'|'onBindRequest'|'onBlur'|'onChange'|'onColorSelect'|'onDestruct'|'onEnter'|'onFocus'|'onKeyPress'|'onLongTouch'|'onSwipeX'|'onSwipeY'|'onTabFocus'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type colorselectEventName ="onAfterRender"|"onAfterScroll"|"onBeforeRender"|"onBindRequest"|"onBlur"|"onChange"|"onColorSelect"|"onDestruct"|"onEnter"|"onFocus"|"onKeyPress"|"onLongTouch"|"onSwipeX"|"onSwipeY"|"onTabFocus"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class colorselect implements webix.ui.baseview{
 	adjust():void;
 	attachEvent(type:colorselectEventName, functor:WebixCallback, id?:string):string|number;
@@ -2974,7 +2974,7 @@ interface commentsConfig{
 	users?: any[]|string|DataCollection;
 	width?: number;
 }
-type commentsEventName ='onAfterAdd'|'onAfterDelete'|'onAfterEditStart'|'onAfterLoad'|'onBeforeAdd'|'onBeforeDelete'|'onBeforeEditStart'|'onBeforeLoad'|'onBeforeMenuAction'|'onBindRequest'|'onDestruct'|'onLoadError'|'onUserMentioned'|'onViewShow';
+type commentsEventName ="onAfterAdd"|"onAfterDelete"|"onAfterEditStart"|"onAfterLoad"|"onBeforeAdd"|"onBeforeDelete"|"onBeforeEditStart"|"onBeforeLoad"|"onBeforeMenuAction"|"onBindRequest"|"onDestruct"|"onLoadError"|"onUserMentioned"|"onViewShow";
 export class comments implements webix.ui.baseview{
 	adjust():void;
 	attachEvent(type:commentsEventName, functor:WebixCallback, id?:string):string|number;
@@ -3072,7 +3072,7 @@ interface comboConfig{
 	value?: string;
 	width?: number;
 }
-type comboEventName ='onAfterRender'|'onAfterScroll'|'onBeforeRender'|'onBindRequest'|'onBlur'|'onChange'|'onDestruct'|'onEnter'|'onFocus'|'onItemClick'|'onKeyPress'|'onLongTouch'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type comboEventName ="onAfterRender"|"onAfterScroll"|"onBeforeRender"|"onBindRequest"|"onBlur"|"onChange"|"onDestruct"|"onEnter"|"onFocus"|"onItemClick"|"onKeyPress"|"onLongTouch"|"onSwipeX"|"onSwipeY"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class combo implements webix.ui.baseview{
 	adjust():void;
 	attachEvent(type:comboEventName, functor:WebixCallback, id?:string):string|number;
@@ -3176,7 +3176,7 @@ interface contextConfig{
 	width?: number;
 	zIndex?: number;
 }
-type contextEventName ='onAfterScroll'|'onBeforeShow'|'onBindRequest'|'onBlur'|'onDestruct'|'onEnter'|'onFocus'|'onHide'|'onKeyPress'|'onLongTouch'|'onShow'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewMove'|'onViewMoveEnd'|'onViewResize'|'onViewShow';
+type contextEventName ="onAfterScroll"|"onBeforeShow"|"onBindRequest"|"onBlur"|"onDestruct"|"onEnter"|"onFocus"|"onHide"|"onKeyPress"|"onLongTouch"|"onShow"|"onSwipeX"|"onSwipeY"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewMove"|"onViewMoveEnd"|"onViewResize"|"onViewShow";
 export class context implements webix.ui.baseview{
 	adjust():void;
 	attachEvent(type:contextEventName, functor:WebixCallback, id?:string):string|number;
@@ -3301,7 +3301,7 @@ interface contextmenuConfig{
 	yCount?: number;
 	zIndex?: number;
 }
-type contextmenuEventName ='onAfterAdd'|'onAfterContextMenu'|'onAfterDelete'|'onAfterDrop'|'onAfterLoad'|'onAfterRender'|'onAfterScroll'|'onAfterSelect'|'onAfterSort'|'onBeforeAdd'|'onBeforeContextMenu'|'onBeforeDelete'|'onBeforeDrag'|'onBeforeDragIn'|'onBeforeDrop'|'onBeforeDropOut'|'onBeforeLoad'|'onBeforeRender'|'onBeforeSelect'|'onBeforeShow'|'onBeforeSort'|'onBindRequest'|'onBlur'|'onDataRequest'|'onDataUpdate'|'onDestruct'|'onDragOut'|'onEnter'|'onFocus'|'onHide'|'onItemClick'|'onItemDblClick'|'onItemRender'|'onKeyPress'|'onLoadError'|'onLongTouch'|'onMenuItemClick'|'onMouseMove'|'onMouseMoving'|'onMouseOut'|'onPaste'|'onSelectChange'|'onShow'|'onSwipeX'|'onSwipeY'|'onTabFocus'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onValidationError'|'onValidationSuccess'|'onViewMove'|'onViewMoveEnd'|'onViewResize'|'onViewShow';
+type contextmenuEventName ="onAfterAdd"|"onAfterContextMenu"|"onAfterDelete"|"onAfterDrop"|"onAfterLoad"|"onAfterRender"|"onAfterScroll"|"onAfterSelect"|"onAfterSort"|"onBeforeAdd"|"onBeforeContextMenu"|"onBeforeDelete"|"onBeforeDrag"|"onBeforeDragIn"|"onBeforeDrop"|"onBeforeDropOut"|"onBeforeLoad"|"onBeforeRender"|"onBeforeSelect"|"onBeforeShow"|"onBeforeSort"|"onBindRequest"|"onBlur"|"onDataRequest"|"onDataUpdate"|"onDestruct"|"onDragOut"|"onEnter"|"onFocus"|"onHide"|"onItemClick"|"onItemDblClick"|"onItemRender"|"onKeyPress"|"onLoadError"|"onLongTouch"|"onMenuItemClick"|"onMouseMove"|"onMouseMoving"|"onMouseOut"|"onPaste"|"onSelectChange"|"onShow"|"onSwipeX"|"onSwipeY"|"onTabFocus"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onValidationError"|"onValidationSuccess"|"onViewMove"|"onViewMoveEnd"|"onViewResize"|"onViewShow";
 export class contextmenu implements webix.ui.baseview{
 	add(obj:any, index?:number):string|number;
 	addCss(id:string|number, css:string, silent?:boolean):void;
@@ -3480,7 +3480,7 @@ interface counterConfig{
 	value?: string|number;
 	width?: number;
 }
-type counterEventName ='onAfterRender'|'onAfterScroll'|'onBeforeRender'|'onBindRequest'|'onBlur'|'onChange'|'onDestruct'|'onEnter'|'onFocus'|'onItemClick'|'onKeyPress'|'onLongTouch'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type counterEventName ="onAfterRender"|"onAfterScroll"|"onBeforeRender"|"onBindRequest"|"onBlur"|"onChange"|"onDestruct"|"onEnter"|"onFocus"|"onItemClick"|"onKeyPress"|"onLongTouch"|"onSwipeX"|"onSwipeY"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class counter implements webix.ui.baseview{
 	adjust():void;
 	attachEvent(type:counterEventName, functor:WebixCallback, id?:string):string|number;
@@ -3580,7 +3580,7 @@ interface dashboardConfig{
 	visibleBatch?: string;
 	width?: number;
 }
-type dashboardEventName ='onAfterDrop'|'onBeforeDrag'|'onBeforeDragIn'|'onBeforeDrop'|'onBindRequest'|'onChange'|'onDestruct'|'onDragOut'|'onViewShow';
+type dashboardEventName ="onAfterDrop"|"onBeforeDrag"|"onBeforeDragIn"|"onBeforeDrop"|"onBindRequest"|"onChange"|"onDestruct"|"onDragOut"|"onViewShow";
 export class dashboard implements webix.ui.baseview{
 	addView(view:any, index?:number):string|number;
 	adjust():void;
@@ -3670,7 +3670,7 @@ interface datalayoutConfig{
 	visibleBatch?: string;
 	width?: number;
 }
-type datalayoutEventName ='onAfterAdd'|'onAfterDelete'|'onAfterLoad'|'onAfterSort'|'onBeforeAdd'|'onBeforeDelete'|'onBeforeLoad'|'onBeforeSort'|'onBindRequest'|'onDataRequest'|'onDataUpdate'|'onDestruct'|'onLoadError'|'onViewShow';
+type datalayoutEventName ="onAfterAdd"|"onAfterDelete"|"onAfterLoad"|"onAfterSort"|"onBeforeAdd"|"onBeforeDelete"|"onBeforeLoad"|"onBeforeSort"|"onBindRequest"|"onDataRequest"|"onDataUpdate"|"onDestruct"|"onLoadError"|"onViewShow";
 export class datalayout implements webix.ui.baseview{
 	add(obj:any, index?:number):string|number;
 	addView(view:any, index?:number):string|number;
@@ -3786,7 +3786,7 @@ interface datasuggestConfig{
 	width?: number;
 	zIndex?: number;
 }
-type datasuggestEventName ='onAfterScroll'|'onBeforeShow'|'onBindRequest'|'onBlur'|'onDestruct'|'onEnter'|'onFocus'|'onHide'|'onKeyPress'|'onLongTouch'|'onShow'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onValueSuggest'|'onViewMove'|'onViewMoveEnd'|'onViewResize'|'onViewShow';
+type datasuggestEventName ="onAfterScroll"|"onBeforeShow"|"onBindRequest"|"onBlur"|"onDestruct"|"onEnter"|"onFocus"|"onHide"|"onKeyPress"|"onLongTouch"|"onShow"|"onSwipeX"|"onSwipeY"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onValueSuggest"|"onViewMove"|"onViewMoveEnd"|"onViewResize"|"onViewShow";
 export class datasuggest implements webix.ui.baseview{
 	adjust():void;
 	attachEvent(type:datasuggestEventName, functor:WebixCallback, id?:string):string|number;
@@ -3937,7 +3937,7 @@ interface datatableConfig{
 	width?: number;
 	yCount?: number;
 }
-type datatableEventName ='onAfterAdd'|'onAfterAreaAdd'|'onAfterAreaRemove'|'onAfterBlockSelect'|'onAfterColumnDrop'|'onAfterColumnDropOrder'|'onAfterColumnHide'|'onAfterColumnShow'|'onAfterContextMenu'|'onAfterDelete'|'onAfterDrop'|'onAfterEditStart'|'onAfterEditStop'|'onAfterFilter'|'onAfterLoad'|'onAfterRender'|'onAfterScroll'|'onAfterSelect'|'onAfterSort'|'onAfterUnSelect'|'onAreaDrag'|'onBeforeAdd'|'onBeforeAreaAdd'|'onBeforeAreaRemove'|'onBeforeBlockSelect'|'onBeforeColumnDrag'|'onBeforeColumnDrop'|'onBeforeColumnDropOrder'|'onBeforeColumnHide'|'onBeforeColumnShow'|'onBeforeContextMenu'|'onBeforeDelete'|'onBeforeDrag'|'onBeforeDragIn'|'onBeforeDrop'|'onBeforeDropOut'|'onBeforeEditStart'|'onBeforeEditStop'|'onBeforeFilter'|'onBeforeLoad'|'onBeforeRender'|'onBeforeSelect'|'onBeforeSort'|'onBeforeUnSelect'|'onBindRequest'|'onBlur'|'onCheck'|'onCollectValues'|'onColumnGroupCollapse'|'onColumnResize'|'onDataRequest'|'onDataUpdate'|'onDestruct'|'onDragOut'|'onEditorChange'|'onEnter'|'onFocus'|'onHeaderClick'|'onItemClick'|'onItemDblClick'|'onKeyPress'|'onLiveEdit'|'onLoadError'|'onLongTouch'|'onMouseMove'|'onMouseMoving'|'onMouseOut'|'onPaste'|'onResize'|'onRowResize'|'onScrollX'|'onScrollY'|'onSelectChange'|'onStructureLoad'|'onStructureUpdate'|'onSubViewClose'|'onSubViewCreate'|'onSubViewOpen'|'onSubViewRender'|'onSwipeX'|'onSwipeY'|'onTabFocus'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onValidationError'|'onValidationSuccess'|'onViewResize'|'onViewShow';
+type datatableEventName ="onAfterAdd"|"onAfterAreaAdd"|"onAfterAreaRemove"|"onAfterBlockSelect"|"onAfterColumnDrop"|"onAfterColumnDropOrder"|"onAfterColumnHide"|"onAfterColumnShow"|"onAfterContextMenu"|"onAfterDelete"|"onAfterDrop"|"onAfterEditStart"|"onAfterEditStop"|"onAfterFilter"|"onAfterLoad"|"onAfterRender"|"onAfterScroll"|"onAfterSelect"|"onAfterSort"|"onAfterUnSelect"|"onAreaDrag"|"onBeforeAdd"|"onBeforeAreaAdd"|"onBeforeAreaRemove"|"onBeforeBlockSelect"|"onBeforeColumnDrag"|"onBeforeColumnDrop"|"onBeforeColumnDropOrder"|"onBeforeColumnHide"|"onBeforeColumnShow"|"onBeforeContextMenu"|"onBeforeDelete"|"onBeforeDrag"|"onBeforeDragIn"|"onBeforeDrop"|"onBeforeDropOut"|"onBeforeEditStart"|"onBeforeEditStop"|"onBeforeFilter"|"onBeforeLoad"|"onBeforeRender"|"onBeforeSelect"|"onBeforeSort"|"onBeforeUnSelect"|"onBindRequest"|"onBlur"|"onCheck"|"onCollectValues"|"onColumnGroupCollapse"|"onColumnResize"|"onDataRequest"|"onDataUpdate"|"onDestruct"|"onDragOut"|"onEditorChange"|"onEnter"|"onFocus"|"onHeaderClick"|"onItemClick"|"onItemDblClick"|"onKeyPress"|"onLiveEdit"|"onLoadError"|"onLongTouch"|"onMouseMove"|"onMouseMoving"|"onMouseOut"|"onPaste"|"onResize"|"onRowResize"|"onScrollX"|"onScrollY"|"onSelectChange"|"onStructureLoad"|"onStructureUpdate"|"onSubViewClose"|"onSubViewCreate"|"onSubViewOpen"|"onSubViewRender"|"onSwipeX"|"onSwipeY"|"onTabFocus"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onValidationError"|"onValidationSuccess"|"onViewResize"|"onViewShow";
 export class datatable implements webix.ui.baseview{
 	add(obj:any, index?:number):string|number;
 	addCellCss(id:string, name:string, css:string, silent:boolean):void;
@@ -4175,7 +4175,7 @@ interface dataviewConfig{
 	xCount?: number;
 	yCount?: number;
 }
-type dataviewEventName ='onAfterAdd'|'onAfterContextMenu'|'onAfterDelete'|'onAfterDrop'|'onAfterLoad'|'onAfterRender'|'onAfterScroll'|'onAfterSelect'|'onAfterSort'|'onBeforeAdd'|'onBeforeContextMenu'|'onBeforeDelete'|'onBeforeDrag'|'onBeforeDragIn'|'onBeforeDrop'|'onBeforeDropOut'|'onBeforeLoad'|'onBeforeRender'|'onBeforeSelect'|'onBeforeSort'|'onBindRequest'|'onBlur'|'onDataRequest'|'onDataUpdate'|'onDestruct'|'onDragOut'|'onEnter'|'onFocus'|'onItemClick'|'onItemDblClick'|'onItemRender'|'onKeyPress'|'onLoadError'|'onLongTouch'|'onMouseMove'|'onMouseMoving'|'onMouseOut'|'onSelectChange'|'onSwipeX'|'onSwipeY'|'onTabFocus'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onValidationError'|'onValidationSuccess'|'onViewResize'|'onViewShow';
+type dataviewEventName ="onAfterAdd"|"onAfterContextMenu"|"onAfterDelete"|"onAfterDrop"|"onAfterLoad"|"onAfterRender"|"onAfterScroll"|"onAfterSelect"|"onAfterSort"|"onBeforeAdd"|"onBeforeContextMenu"|"onBeforeDelete"|"onBeforeDrag"|"onBeforeDragIn"|"onBeforeDrop"|"onBeforeDropOut"|"onBeforeLoad"|"onBeforeRender"|"onBeforeSelect"|"onBeforeSort"|"onBindRequest"|"onBlur"|"onDataRequest"|"onDataUpdate"|"onDestruct"|"onDragOut"|"onEnter"|"onFocus"|"onItemClick"|"onItemDblClick"|"onItemRender"|"onKeyPress"|"onLoadError"|"onLongTouch"|"onMouseMove"|"onMouseMoving"|"onMouseOut"|"onSelectChange"|"onSwipeX"|"onSwipeY"|"onTabFocus"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onValidationError"|"onValidationSuccess"|"onViewResize"|"onViewShow";
 export class dataview implements webix.ui.baseview{
 	add(obj:any, index?:number):string|number;
 	addCss(id:string|number, css:string, silent?:boolean):void;
@@ -4315,7 +4315,7 @@ interface daterangeConfig{
 	value?: any;
 	width?: number;
 }
-type daterangeEventName ='onAfterDateSelect'|'onBeforeDateSelect'|'onBindRequest'|'onChange'|'onDateClear'|'onDestruct'|'onTodaySet'|'onViewShow';
+type daterangeEventName ="onAfterDateSelect"|"onBeforeDateSelect"|"onBindRequest"|"onChange"|"onDateClear"|"onDestruct"|"onTodaySet"|"onViewShow";
 export class daterange implements webix.ui.baseview{
 	addToRange(dates:string|Date):void;
 	adjust():void;
@@ -4414,7 +4414,7 @@ interface daterangepickerConfig{
 	value?: any;
 	width?: number;
 }
-type daterangepickerEventName ='onAfterRender'|'onAfterScroll'|'onBeforeRender'|'onBindRequest'|'onBlur'|'onChange'|'onDestruct'|'onEnter'|'onFocus'|'onItemClick'|'onKeyPress'|'onLongTouch'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type daterangepickerEventName ="onAfterRender"|"onAfterScroll"|"onBeforeRender"|"onBindRequest"|"onBlur"|"onChange"|"onDestruct"|"onEnter"|"onFocus"|"onItemClick"|"onKeyPress"|"onLongTouch"|"onSwipeX"|"onSwipeY"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class daterangepicker implements webix.ui.baseview{
 	adjust():void;
 	attachEvent(type:daterangepickerEventName, functor:WebixCallback, id?:string):string|number;
@@ -4526,7 +4526,7 @@ interface daterangesuggestConfig{
 	width?: number;
 	zIndex?: number;
 }
-type daterangesuggestEventName ='onAfterScroll'|'onBeforeShow'|'onBindRequest'|'onBlur'|'onDestruct'|'onEnter'|'onFocus'|'onHide'|'onKeyPress'|'onLongTouch'|'onShow'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onValueSuggest'|'onViewMove'|'onViewMoveEnd'|'onViewResize'|'onViewShow';
+type daterangesuggestEventName ="onAfterScroll"|"onBeforeShow"|"onBindRequest"|"onBlur"|"onDestruct"|"onEnter"|"onFocus"|"onHide"|"onKeyPress"|"onLongTouch"|"onShow"|"onSwipeX"|"onSwipeY"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onValueSuggest"|"onViewMove"|"onViewMoveEnd"|"onViewResize"|"onViewShow";
 export class daterangesuggest implements webix.ui.baseview{
 	adjust():void;
 	attachEvent(type:daterangesuggestEventName, functor:WebixCallback, id?:string):string|number;
@@ -4641,7 +4641,7 @@ interface datepickerConfig{
 	value?: Date|string;
 	width?: number;
 }
-type datepickerEventName ='onAfterRender'|'onAfterScroll'|'onBeforeRender'|'onBindRequest'|'onBlur'|'onChange'|'onDestruct'|'onEnter'|'onFocus'|'onItemClick'|'onKeyPress'|'onLongTouch'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type datepickerEventName ="onAfterRender"|"onAfterScroll"|"onBeforeRender"|"onBindRequest"|"onBlur"|"onChange"|"onDestruct"|"onEnter"|"onFocus"|"onItemClick"|"onKeyPress"|"onLongTouch"|"onSwipeX"|"onSwipeY"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class datepicker implements webix.ui.baseview{
 	adjust():void;
 	attachEvent(type:datepickerEventName, functor:WebixCallback, id?:string):string|number;
@@ -4739,7 +4739,7 @@ interface dbllistConfig{
 	value?: string|any[];
 	width?: number;
 }
-type dbllistEventName ='onAfterLoad'|'onBeforeLoad'|'onBindRequest'|'onChange'|'onDestruct'|'onLoadError'|'onViewShow';
+type dbllistEventName ="onAfterLoad"|"onBeforeLoad"|"onBindRequest"|"onChange"|"onDestruct"|"onLoadError"|"onViewShow";
 export class dbllist implements webix.ui.baseview{
 	adjust():void;
 	attachEvent(type:dbllistEventName, functor:WebixCallback, id?:string):string|number;
@@ -4818,7 +4818,7 @@ interface docmanagerConfig{
 	url?: string;
 	width?: number;
 }
-type docmanagerEventName ='onAfterScroll'|'onBlur'|'onDestruct'|'onEnter'|'onFocus'|'onInit'|'onLongTouch'|'onSwipeX'|'onSwipeY'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type docmanagerEventName ="onAfterScroll"|"onBlur"|"onDestruct"|"onEnter"|"onFocus"|"onInit"|"onLongTouch"|"onSwipeX"|"onSwipeY"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class docmanager implements webix.ui.baseview{
 	adjust():void;
 	app(app:any):void;
@@ -4957,7 +4957,7 @@ interface excelviewerConfig{
 	width?: number;
 	yCount?: number;
 }
-type excelviewerEventName ='onAfterAdd'|'onAfterAreaAdd'|'onAfterAreaRemove'|'onAfterBlockSelect'|'onAfterColumnDrop'|'onAfterColumnDropOrder'|'onAfterColumnHide'|'onAfterColumnShow'|'onAfterContextMenu'|'onAfterDelete'|'onAfterDrop'|'onAfterEditStart'|'onAfterEditStop'|'onAfterFilter'|'onAfterLoad'|'onAfterRender'|'onAfterScroll'|'onAfterSelect'|'onAfterSort'|'onAfterUnSelect'|'onAreaDrag'|'onBeforeAdd'|'onBeforeAreaAdd'|'onBeforeAreaRemove'|'onBeforeBlockSelect'|'onBeforeColumnDrag'|'onBeforeColumnDrop'|'onBeforeColumnDropOrder'|'onBeforeColumnHide'|'onBeforeColumnShow'|'onBeforeContextMenu'|'onBeforeDelete'|'onBeforeDrag'|'onBeforeDragIn'|'onBeforeDrop'|'onBeforeDropOut'|'onBeforeEditStart'|'onBeforeEditStop'|'onBeforeFilter'|'onBeforeLoad'|'onBeforeRender'|'onBeforeSelect'|'onBeforeSort'|'onBeforeUnSelect'|'onBindRequest'|'onBlur'|'onCheck'|'onCollectValues'|'onColumnResize'|'onDataRequest'|'onDataUpdate'|'onDestruct'|'onDragOut'|'onEditorChange'|'onEnter'|'onFocus'|'onHeaderClick'|'onItemClick'|'onItemDblClick'|'onKeyPress'|'onLiveEdit'|'onLoadError'|'onLongTouch'|'onMouseMove'|'onMouseMoving'|'onMouseOut'|'onPaste'|'onResize'|'onRowResize'|'onScrollX'|'onScrollY'|'onSelectChange'|'onStructureLoad'|'onStructureUpdate'|'onSubViewClose'|'onSubViewCreate'|'onSubViewOpen'|'onSubViewRender'|'onSwipeX'|'onSwipeY'|'onTabFocus'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onValidationError'|'onValidationSuccess'|'onViewResize'|'onViewShow';
+type excelviewerEventName ="onAfterAdd"|"onAfterAreaAdd"|"onAfterAreaRemove"|"onAfterBlockSelect"|"onAfterColumnDrop"|"onAfterColumnDropOrder"|"onAfterColumnHide"|"onAfterColumnShow"|"onAfterContextMenu"|"onAfterDelete"|"onAfterDrop"|"onAfterEditStart"|"onAfterEditStop"|"onAfterFilter"|"onAfterLoad"|"onAfterRender"|"onAfterScroll"|"onAfterSelect"|"onAfterSort"|"onAfterUnSelect"|"onAreaDrag"|"onBeforeAdd"|"onBeforeAreaAdd"|"onBeforeAreaRemove"|"onBeforeBlockSelect"|"onBeforeColumnDrag"|"onBeforeColumnDrop"|"onBeforeColumnDropOrder"|"onBeforeColumnHide"|"onBeforeColumnShow"|"onBeforeContextMenu"|"onBeforeDelete"|"onBeforeDrag"|"onBeforeDragIn"|"onBeforeDrop"|"onBeforeDropOut"|"onBeforeEditStart"|"onBeforeEditStop"|"onBeforeFilter"|"onBeforeLoad"|"onBeforeRender"|"onBeforeSelect"|"onBeforeSort"|"onBeforeUnSelect"|"onBindRequest"|"onBlur"|"onCheck"|"onCollectValues"|"onColumnResize"|"onDataRequest"|"onDataUpdate"|"onDestruct"|"onDragOut"|"onEditorChange"|"onEnter"|"onFocus"|"onHeaderClick"|"onItemClick"|"onItemDblClick"|"onKeyPress"|"onLiveEdit"|"onLoadError"|"onLongTouch"|"onMouseMove"|"onMouseMoving"|"onMouseOut"|"onPaste"|"onResize"|"onRowResize"|"onScrollX"|"onScrollY"|"onSelectChange"|"onStructureLoad"|"onStructureUpdate"|"onSubViewClose"|"onSubViewCreate"|"onSubViewOpen"|"onSubViewRender"|"onSwipeX"|"onSwipeY"|"onTabFocus"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onValidationError"|"onValidationSuccess"|"onViewResize"|"onViewShow";
 export class excelviewer implements webix.ui.baseview{
 	add(obj:any, index?:number):string|number;
 	addCellCss(id:string, name:string, css:string, silent:boolean):void;
@@ -5154,7 +5154,7 @@ interface fieldsetConfig{
 	paddingY?: number;
 	width?: number;
 }
-type fieldsetEventName ='onAfterScroll'|'onBindRequest'|'onBlur'|'onDestruct'|'onEnter'|'onFocus'|'onKeyPress'|'onLongTouch'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type fieldsetEventName ="onAfterScroll"|"onBindRequest"|"onBlur"|"onDestruct"|"onEnter"|"onFocus"|"onKeyPress"|"onLongTouch"|"onSwipeX"|"onSwipeY"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class fieldset implements webix.ui.baseview{
 	adjust():void;
 	bind(target:any, rule?:WebixCallback, format?:string):void;
@@ -5218,7 +5218,7 @@ interface filemanagerConfig{
 	url?: string;
 	width?: number;
 }
-type filemanagerEventName ='onAfterScroll'|'onBlur'|'onDestruct'|'onEnter'|'onFocus'|'onInit'|'onLongTouch'|'onSwipeX'|'onSwipeY'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type filemanagerEventName ="onAfterScroll"|"onBlur"|"onDestruct"|"onEnter"|"onFocus"|"onInit"|"onLongTouch"|"onSwipeX"|"onSwipeY"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class filemanager implements webix.ui.baseview{
 	adjust():void;
 	app(app:any):void;
@@ -5292,7 +5292,7 @@ interface filterConfig{
 	value?: any;
 	width?: number;
 }
-type filterEventName ='onAfterLoad'|'onBeforeLoad'|'onBindRequest'|'onChange'|'onDestruct'|'onLoadError'|'onViewShow';
+type filterEventName ="onAfterLoad"|"onBeforeLoad"|"onBindRequest"|"onChange"|"onDestruct"|"onLoadError"|"onViewShow";
 export class filter implements webix.ui.baseview{
 	adjust():void;
 	applyFilter():void;
@@ -5379,7 +5379,7 @@ interface formConfig{
 	visibleBatch?: string;
 	width?: number;
 }
-type formEventName ='onAfterLoad'|'onAfterScroll'|'onAfterValidation'|'onBeforeLoad'|'onBeforeValidate'|'onBindRequest'|'onChange'|'onDestruct'|'onLoadError'|'onSubmit'|'onValidationError'|'onValidationSuccess'|'onValues'|'onViewShow';
+type formEventName ="onAfterLoad"|"onAfterScroll"|"onAfterValidation"|"onBeforeLoad"|"onBeforeValidate"|"onBindRequest"|"onChange"|"onDestruct"|"onLoadError"|"onSubmit"|"onValidationError"|"onValidationSuccess"|"onValues"|"onViewShow";
 export class form implements webix.ui.baseview{
 	addView(view:any, index?:number):string|number;
 	adjust():void;
@@ -5467,7 +5467,7 @@ interface forminputConfig{
 	value?: any;
 	width?: number;
 }
-type forminputEventName ='onAfterScroll'|'onBindRequest'|'onBlur'|'onDestruct'|'onEnter'|'onFocus'|'onKeyPress'|'onLongTouch'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type forminputEventName ="onAfterScroll"|"onBindRequest"|"onBlur"|"onDestruct"|"onEnter"|"onFocus"|"onKeyPress"|"onLongTouch"|"onSwipeX"|"onSwipeY"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class forminput implements webix.ui.baseview{
 	adjust():void;
 	bind(target:any, rule?:WebixCallback, format?:string):void;
@@ -5533,7 +5533,7 @@ interface gageConfig{
 	value?: number;
 	width?: number;
 }
-type gageEventName ='onAfterScroll'|'onBindRequest'|'onBlur'|'onDestruct'|'onEnter'|'onFocus'|'onKeyPress'|'onLongTouch'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type gageEventName ="onAfterScroll"|"onBindRequest"|"onBlur"|"onDestruct"|"onEnter"|"onFocus"|"onKeyPress"|"onLongTouch"|"onSwipeX"|"onSwipeY"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class gage implements webix.ui.baseview{
 	adjust():void;
 	attachEvent(type:gageEventName, functor:WebixCallback, id?:string):string|number;
@@ -5607,7 +5607,7 @@ interface ganttConfig{
 	url?: string;
 	width?: number;
 }
-type ganttEventName ='onAfterScroll'|'onBindRequest'|'onBlur'|'onDestruct'|'onEnter'|'onFocus'|'onInit'|'onKeyPress'|'onLongTouch'|'onSwipeX'|'onSwipeY'|'onTabFocus'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type ganttEventName ="onAfterScroll"|"onBindRequest"|"onBlur"|"onDestruct"|"onEnter"|"onFocus"|"onInit"|"onKeyPress"|"onLongTouch"|"onSwipeX"|"onSwipeY"|"onTabFocus"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class gantt implements webix.ui.baseview{
 	adjust():void;
 	app(app:any):void;
@@ -5681,7 +5681,7 @@ interface geochartConfig{
 	url?: any;
 	width?: number;
 }
-type geochartEventName ='onAfterAdd'|'onAfterDelete'|'onAfterLoad'|'onAfterScroll'|'onAfterSort'|'onBeforeAdd'|'onBeforeDelete'|'onBeforeLoad'|'onBeforeSort'|'onBindRequest'|'onBlur'|'onDataRequest'|'onDataUpdate'|'onDestruct'|'onEnter'|'onFocus'|'onItemClick'|'onKeyPress'|'onLoadError'|'onLongTouch'|'onMapError'|'onMapReady'|'onRegionClick'|'onSwipeX'|'onSwipeY'|'onTabFocus'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type geochartEventName ="onAfterAdd"|"onAfterDelete"|"onAfterLoad"|"onAfterScroll"|"onAfterSort"|"onBeforeAdd"|"onBeforeDelete"|"onBeforeLoad"|"onBeforeSort"|"onBindRequest"|"onBlur"|"onDataRequest"|"onDataUpdate"|"onDestruct"|"onEnter"|"onFocus"|"onItemClick"|"onKeyPress"|"onLoadError"|"onLongTouch"|"onMapError"|"onMapReady"|"onRegionClick"|"onSwipeX"|"onSwipeY"|"onTabFocus"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class geochart implements webix.ui.baseview{
 	add(obj:any, index?:number):string|number;
 	adjust():void;
@@ -5782,7 +5782,7 @@ interface googleMapConfig{
 	width?: number;
 	zoom?: number;
 }
-type googleMapEventName ='onAfterAdd'|'onAfterDelete'|'onAfterLoad'|'onAfterScroll'|'onAfterSort'|'onBeforeAdd'|'onBeforeDelete'|'onBeforeLoad'|'onBeforeSort'|'onBindRequest'|'onBlur'|'onDataRequest'|'onDataUpdate'|'onDestruct'|'onEnter'|'onFocus'|'onHeatMapRender'|'onKeyPress'|'onLoadError'|'onLongTouch'|'onSwipeX'|'onSwipeY'|'onTabFocus'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type googleMapEventName ="onAfterAdd"|"onAfterDelete"|"onAfterLoad"|"onAfterScroll"|"onAfterSort"|"onBeforeAdd"|"onBeforeDelete"|"onBeforeLoad"|"onBeforeSort"|"onBindRequest"|"onBlur"|"onDataRequest"|"onDataUpdate"|"onDestruct"|"onEnter"|"onFocus"|"onHeatMapRender"|"onKeyPress"|"onLoadError"|"onLongTouch"|"onSwipeX"|"onSwipeY"|"onTabFocus"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class googleMap implements webix.ui.baseview{
 	add(obj:any, index?:number):string|number;
 	adjust():void;
@@ -5882,7 +5882,7 @@ interface gridlayoutConfig{
 	visibleBatch?: string;
 	width?: number;
 }
-type gridlayoutEventName ='onBindRequest'|'onChange'|'onDestruct'|'onViewShow';
+type gridlayoutEventName ="onBindRequest"|"onChange"|"onDestruct"|"onViewShow";
 export class gridlayout implements webix.ui.baseview{
 	addView(view:any, index?:number):string|number;
 	adjust():void;
@@ -5975,7 +5975,7 @@ interface gridsuggestConfig{
 	width?: number;
 	zIndex?: number;
 }
-type gridsuggestEventName ='onAfterScroll'|'onBeforeShow'|'onBindRequest'|'onBlur'|'onDestruct'|'onEnter'|'onFocus'|'onHide'|'onKeyPress'|'onLongTouch'|'onShow'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onValueSuggest'|'onViewMove'|'onViewMoveEnd'|'onViewResize'|'onViewShow';
+type gridsuggestEventName ="onAfterScroll"|"onBeforeShow"|"onBindRequest"|"onBlur"|"onDestruct"|"onEnter"|"onFocus"|"onHide"|"onKeyPress"|"onLongTouch"|"onShow"|"onSwipeX"|"onSwipeY"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onValueSuggest"|"onViewMove"|"onViewMoveEnd"|"onViewResize"|"onViewShow";
 export class gridsuggest implements webix.ui.baseview{
 	adjust():void;
 	attachEvent(type:gridsuggestEventName, functor:WebixCallback, id?:string):string|number;
@@ -6089,7 +6089,7 @@ interface grouplistConfig{
 	xCount?: number;
 	yCount?: number;
 }
-type grouplistEventName ='onAfterAdd'|'onAfterContextMenu'|'onAfterDelete'|'onAfterDrop'|'onAfterLoad'|'onAfterRender'|'onAfterScroll'|'onAfterSelect'|'onAfterSort'|'onBeforeAdd'|'onBeforeContextMenu'|'onBeforeDelete'|'onBeforeDrag'|'onBeforeDragIn'|'onBeforeDrop'|'onBeforeDropOut'|'onBeforeLoad'|'onBeforeRender'|'onBeforeSelect'|'onBeforeSort'|'onBindRequest'|'onBlur'|'onDataRequest'|'onDataUpdate'|'onDestruct'|'onDragOut'|'onEnter'|'onFocus'|'onItemClick'|'onItemDblClick'|'onItemRender'|'onKeyPress'|'onLoadError'|'onLongTouch'|'onMouseMove'|'onMouseMoving'|'onMouseOut'|'onPaste'|'onSelectChange'|'onSwipeX'|'onSwipeY'|'onTabFocus'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onValidationError'|'onValidationSuccess'|'onViewResize'|'onViewShow';
+type grouplistEventName ="onAfterAdd"|"onAfterContextMenu"|"onAfterDelete"|"onAfterDrop"|"onAfterLoad"|"onAfterRender"|"onAfterScroll"|"onAfterSelect"|"onAfterSort"|"onBeforeAdd"|"onBeforeContextMenu"|"onBeforeDelete"|"onBeforeDrag"|"onBeforeDragIn"|"onBeforeDrop"|"onBeforeDropOut"|"onBeforeLoad"|"onBeforeRender"|"onBeforeSelect"|"onBeforeSort"|"onBindRequest"|"onBlur"|"onDataRequest"|"onDataUpdate"|"onDestruct"|"onDragOut"|"onEnter"|"onFocus"|"onItemClick"|"onItemDblClick"|"onItemRender"|"onKeyPress"|"onLoadError"|"onLongTouch"|"onMouseMove"|"onMouseMoving"|"onMouseOut"|"onPaste"|"onSelectChange"|"onSwipeX"|"onSwipeY"|"onTabFocus"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onValidationError"|"onValidationSuccess"|"onViewResize"|"onViewShow";
 export class grouplist implements webix.ui.baseview{
 	add(obj:any, index?:number, parentId?:string):string;
 	addCss(id:string|number, css:string, silent?:boolean):void;
@@ -6239,7 +6239,7 @@ interface headerlayoutConfig{
 	visibleBatch?: string;
 	width?: number;
 }
-type headerlayoutEventName ='onAfterCollapse'|'onAfterExpand'|'onBindRequest'|'onDestruct'|'onViewShow';
+type headerlayoutEventName ="onAfterCollapse"|"onAfterExpand"|"onBindRequest"|"onDestruct"|"onViewShow";
 export class headerlayout implements webix.ui.baseview{
 	addView(view:any, index?:number):string|number;
 	adjust():void;
@@ -6310,7 +6310,7 @@ interface hintConfig{
 	top?: number;
 	width?: number;
 }
-type hintEventName ='onAfterScroll'|'onAfterStart'|'onBeforeStart'|'onBindRequest'|'onBlur'|'onDestruct'|'onEnd'|'onEnter'|'onFocus'|'onKeyPress'|'onLongTouch'|'onNext'|'onPrevious'|'onSkip'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type hintEventName ="onAfterScroll"|"onAfterStart"|"onBeforeStart"|"onBindRequest"|"onBlur"|"onDestruct"|"onEnd"|"onEnter"|"onFocus"|"onKeyPress"|"onLongTouch"|"onNext"|"onPrevious"|"onSkip"|"onSwipeX"|"onSwipeY"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class hint implements webix.ui.baseview{
 	adjust():void;
 	attachEvent(type:hintEventName, functor:WebixCallback, id?:string):string|number;
@@ -6386,7 +6386,7 @@ interface htmlformConfig{
 	url?: any;
 	width?: number;
 }
-type htmlformEventName ='onAfterLoad'|'onAfterRender'|'onAfterScroll'|'onBeforeLoad'|'onBeforeRender'|'onBindRequest'|'onBlur'|'onChange'|'onDestruct'|'onEnter'|'onFocus'|'onKeyPress'|'onLoadError'|'onLongTouch'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onValues'|'onViewResize'|'onViewShow';
+type htmlformEventName ="onAfterLoad"|"onAfterRender"|"onAfterScroll"|"onBeforeLoad"|"onBeforeRender"|"onBindRequest"|"onBlur"|"onChange"|"onDestruct"|"onEnter"|"onFocus"|"onKeyPress"|"onLoadError"|"onLongTouch"|"onSwipeX"|"onSwipeY"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onValues"|"onViewResize"|"onViewShow";
 export class htmlform implements webix.ui.baseview{
 	adjust():void;
 	attachEvent(type:htmlformEventName, functor:WebixCallback, id?:string):string|number;
@@ -6477,7 +6477,7 @@ interface iconConfig{
 	value?: string|number;
 	width?: number;
 }
-type iconEventName ='onAfterRender'|'onAfterScroll'|'onBeforeRender'|'onBindRequest'|'onBlur'|'onChange'|'onDestruct'|'onEnter'|'onFocus'|'onItemClick'|'onKeyPress'|'onLongTouch'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type iconEventName ="onAfterRender"|"onAfterScroll"|"onBeforeRender"|"onBindRequest"|"onBlur"|"onChange"|"onDestruct"|"onEnter"|"onFocus"|"onItemClick"|"onKeyPress"|"onLongTouch"|"onSwipeX"|"onSwipeY"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class icon implements webix.ui.baseview{
 	adjust():void;
 	attachEvent(type:iconEventName, functor:WebixCallback, id?:string):string|number;
@@ -6554,7 +6554,7 @@ interface iframeConfig{
 	src?: string;
 	width?: number;
 }
-type iframeEventName ='onAfterLoad'|'onAfterScroll'|'onBeforeLoad'|'onBindRequest'|'onBlur'|'onDestruct'|'onEnter'|'onFocus'|'onKeyPress'|'onLongTouch'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type iframeEventName ="onAfterLoad"|"onAfterScroll"|"onBeforeLoad"|"onBindRequest"|"onBlur"|"onDestruct"|"onEnter"|"onFocus"|"onKeyPress"|"onLongTouch"|"onSwipeX"|"onSwipeY"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class iframe implements webix.ui.baseview{
 	adjust():void;
 	attachEvent(type:iframeEventName, functor:WebixCallback, id?:string):string|number;
@@ -6645,7 +6645,7 @@ interface kanbanConfig{
 	visibleBatch?: string;
 	width?: number;
 }
-type kanbanEventName ='onAfterAdd'|'onAfterCollapse'|'onAfterCopy'|'onAfterDelete'|'onAfterEditorShow'|'onAfterExpand'|'onAfterLoad'|'onAfterSort'|'onAfterStatusChange'|'onAvatarClick'|'onBeforeAdd'|'onBeforeCopy'|'onBeforeDelete'|'onBeforeEditorAction'|'onBeforeEditorShow'|'onBeforeLoad'|'onBeforeSort'|'onBeforeStatusChange'|'onBindRequest'|'onDataRequest'|'onDataUpdate'|'onDestruct'|'onListAfterContextMenu'|'onListAfterDrop'|'onListAfterSelect'|'onListBeforeContextMenu'|'onListBeforeDrag'|'onListBeforeDragIn'|'onListBeforeDrop'|'onListBeforeSelect'|'onListIconClick'|'onListItemClick'|'onListItemDblClick'|'onLoadError'|'onViewShow';
+type kanbanEventName ="onAfterAdd"|"onAfterCollapse"|"onAfterCopy"|"onAfterDelete"|"onAfterEditorShow"|"onAfterExpand"|"onAfterLoad"|"onAfterSort"|"onAfterStatusChange"|"onAvatarClick"|"onBeforeAdd"|"onBeforeCopy"|"onBeforeDelete"|"onBeforeEditorAction"|"onBeforeEditorShow"|"onBeforeLoad"|"onBeforeSort"|"onBeforeStatusChange"|"onBindRequest"|"onDataRequest"|"onDataUpdate"|"onDestruct"|"onListAfterContextMenu"|"onListAfterDrop"|"onListAfterSelect"|"onListBeforeContextMenu"|"onListBeforeDrag"|"onListBeforeDragIn"|"onListBeforeDrop"|"onListBeforeSelect"|"onListIconClick"|"onListItemClick"|"onListItemDblClick"|"onLoadError"|"onViewShow";
 export class kanban implements webix.ui.baseview{
 	add(obj:any, index?:number):string|number;
 	addView(view:any, index?:number):string|number;
@@ -6760,7 +6760,7 @@ interface labelConfig{
 	value?: string|number;
 	width?: number;
 }
-type labelEventName ='onAfterRender'|'onAfterScroll'|'onBeforeRender'|'onBindRequest'|'onBlur'|'onChange'|'onDestruct'|'onEnter'|'onFocus'|'onItemClick'|'onKeyPress'|'onLongTouch'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type labelEventName ="onAfterRender"|"onAfterScroll"|"onBeforeRender"|"onBindRequest"|"onBlur"|"onChange"|"onDestruct"|"onEnter"|"onFocus"|"onItemClick"|"onKeyPress"|"onLongTouch"|"onSwipeX"|"onSwipeY"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class label implements webix.ui.baseview{
 	adjust():void;
 	attachEvent(type:labelEventName, functor:WebixCallback, id?:string):string|number;
@@ -6847,7 +6847,7 @@ interface layoutConfig{
 	visibleBatch?: string;
 	width?: number;
 }
-type layoutEventName ='onBindRequest'|'onDestruct'|'onViewShow';
+type layoutEventName ="onBindRequest"|"onDestruct"|"onViewShow";
 export class layout implements webix.ui.baseview{
 	addView(view:any, index?:number):string|number;
 	adjust():void;
@@ -6951,7 +6951,7 @@ interface listConfig{
 	xCount?: number;
 	yCount?: number;
 }
-type listEventName ='onAfterAdd'|'onAfterContextMenu'|'onAfterDelete'|'onAfterDrop'|'onAfterLoad'|'onAfterRender'|'onAfterScroll'|'onAfterSelect'|'onAfterSort'|'onBeforeAdd'|'onBeforeContextMenu'|'onBeforeDelete'|'onBeforeDrag'|'onBeforeDragIn'|'onBeforeDrop'|'onBeforeDropOut'|'onBeforeLoad'|'onBeforeRender'|'onBeforeSelect'|'onBeforeSort'|'onBindRequest'|'onBlur'|'onDataRequest'|'onDataUpdate'|'onDestruct'|'onDragOut'|'onEnter'|'onFocus'|'onItemClick'|'onItemDblClick'|'onItemRender'|'onKeyPress'|'onLoadError'|'onLongTouch'|'onMouseMove'|'onMouseMoving'|'onMouseOut'|'onPaste'|'onSelectChange'|'onSwipeX'|'onSwipeY'|'onTabFocus'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onValidationError'|'onValidationSuccess'|'onViewResize'|'onViewShow';
+type listEventName ="onAfterAdd"|"onAfterContextMenu"|"onAfterDelete"|"onAfterDrop"|"onAfterLoad"|"onAfterRender"|"onAfterScroll"|"onAfterSelect"|"onAfterSort"|"onBeforeAdd"|"onBeforeContextMenu"|"onBeforeDelete"|"onBeforeDrag"|"onBeforeDragIn"|"onBeforeDrop"|"onBeforeDropOut"|"onBeforeLoad"|"onBeforeRender"|"onBeforeSelect"|"onBeforeSort"|"onBindRequest"|"onBlur"|"onDataRequest"|"onDataUpdate"|"onDestruct"|"onDragOut"|"onEnter"|"onFocus"|"onItemClick"|"onItemDblClick"|"onItemRender"|"onKeyPress"|"onLoadError"|"onLongTouch"|"onMouseMove"|"onMouseMoving"|"onMouseOut"|"onPaste"|"onSelectChange"|"onSwipeX"|"onSwipeY"|"onTabFocus"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onValidationError"|"onValidationSuccess"|"onViewResize"|"onViewShow";
 export class list implements webix.ui.baseview{
 	add(obj:any, index?:number):string|number;
 	addCss(id:string|number, css:string, silent?:boolean):void;
@@ -7114,7 +7114,7 @@ interface mentionsuggestConfig{
 	width?: number;
 	zIndex?: number;
 }
-type mentionsuggestEventName ='onAfterScroll'|'onBeforeShow'|'onBindRequest'|'onBlur'|'onDestruct'|'onEnter'|'onFocus'|'onHide'|'onKeyPress'|'onLongTouch'|'onShow'|'onSwipeX'|'onSwipeY'|'onTabFocus'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onValueSuggest'|'onViewMove'|'onViewMoveEnd'|'onViewResize'|'onViewShow';
+type mentionsuggestEventName ="onAfterScroll"|"onBeforeShow"|"onBindRequest"|"onBlur"|"onDestruct"|"onEnter"|"onFocus"|"onHide"|"onKeyPress"|"onLongTouch"|"onShow"|"onSwipeX"|"onSwipeY"|"onTabFocus"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onValueSuggest"|"onViewMove"|"onViewMoveEnd"|"onViewResize"|"onViewShow";
 export class mentionsuggest implements webix.ui.baseview{
 	adjust():void;
 	attachEvent(type:mentionsuggestEventName, functor:WebixCallback, id?:string):string|number;
@@ -7229,7 +7229,7 @@ interface menuConfig{
 	xCount?: number;
 	yCount?: number;
 }
-type menuEventName ='onAfterAdd'|'onAfterContextMenu'|'onAfterDelete'|'onAfterDrop'|'onAfterLoad'|'onAfterRender'|'onAfterScroll'|'onAfterSelect'|'onAfterSort'|'onBeforeAdd'|'onBeforeContextMenu'|'onBeforeDelete'|'onBeforeDrag'|'onBeforeDragIn'|'onBeforeDrop'|'onBeforeDropOut'|'onBeforeLoad'|'onBeforeRender'|'onBeforeSelect'|'onBeforeSort'|'onBindRequest'|'onBlur'|'onDataRequest'|'onDataUpdate'|'onDestruct'|'onDragOut'|'onEnter'|'onFocus'|'onItemClick'|'onItemDblClick'|'onItemRender'|'onKeyPress'|'onLoadError'|'onLongTouch'|'onMenuItemClick'|'onMouseMove'|'onMouseMoving'|'onMouseOut'|'onPaste'|'onSelectChange'|'onSwipeX'|'onSwipeY'|'onTabFocus'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onValidationError'|'onValidationSuccess'|'onViewResize'|'onViewShow';
+type menuEventName ="onAfterAdd"|"onAfterContextMenu"|"onAfterDelete"|"onAfterDrop"|"onAfterLoad"|"onAfterRender"|"onAfterScroll"|"onAfterSelect"|"onAfterSort"|"onBeforeAdd"|"onBeforeContextMenu"|"onBeforeDelete"|"onBeforeDrag"|"onBeforeDragIn"|"onBeforeDrop"|"onBeforeDropOut"|"onBeforeLoad"|"onBeforeRender"|"onBeforeSelect"|"onBeforeSort"|"onBindRequest"|"onBlur"|"onDataRequest"|"onDataUpdate"|"onDestruct"|"onDragOut"|"onEnter"|"onFocus"|"onItemClick"|"onItemDblClick"|"onItemRender"|"onKeyPress"|"onLoadError"|"onLongTouch"|"onMenuItemClick"|"onMouseMove"|"onMouseMoving"|"onMouseOut"|"onPaste"|"onSelectChange"|"onSwipeX"|"onSwipeY"|"onTabFocus"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onValidationError"|"onValidationSuccess"|"onViewResize"|"onViewShow";
 export class menu implements webix.ui.baseview{
 	add(obj:any, index?:number):string|number;
 	addCss(id:string|number, css:string, silent?:boolean):void;
@@ -7408,7 +7408,7 @@ interface multicomboConfig{
 	value?: number|string|any[];
 	width?: number;
 }
-type multicomboEventName ='onAfterRender'|'onAfterScroll'|'onBeforeRender'|'onBindRequest'|'onBlur'|'onChange'|'onDestruct'|'onEnter'|'onFocus'|'onItemClick'|'onKeyPress'|'onLongTouch'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type multicomboEventName ="onAfterRender"|"onAfterScroll"|"onBeforeRender"|"onBindRequest"|"onBlur"|"onChange"|"onDestruct"|"onEnter"|"onFocus"|"onItemClick"|"onKeyPress"|"onLongTouch"|"onSwipeX"|"onSwipeY"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class multicombo implements webix.ui.baseview{
 	adjust():void;
 	attachEvent(type:multicomboEventName, functor:WebixCallback, id?:string):string|number;
@@ -7528,7 +7528,7 @@ interface multiselectConfig{
 	value?: string|number|any[];
 	width?: number;
 }
-type multiselectEventName ='onAfterRender'|'onAfterScroll'|'onBeforeRender'|'onBindRequest'|'onBlur'|'onChange'|'onDestruct'|'onEnter'|'onFocus'|'onItemClick'|'onKeyPress'|'onLongTouch'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type multiselectEventName ="onAfterRender"|"onAfterScroll"|"onBeforeRender"|"onBindRequest"|"onBlur"|"onChange"|"onDestruct"|"onEnter"|"onFocus"|"onItemClick"|"onKeyPress"|"onLongTouch"|"onSwipeX"|"onSwipeY"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class multiselect implements webix.ui.baseview{
 	adjust():void;
 	attachEvent(type:multiselectEventName, functor:WebixCallback, id?:string):string|number;
@@ -7645,7 +7645,7 @@ interface multisuggestConfig{
 	width?: number;
 	zIndex?: number;
 }
-type multisuggestEventName ='onAfterScroll'|'onBeforeShow'|'onBindRequest'|'onBlur'|'onDestruct'|'onEnter'|'onFocus'|'onHide'|'onKeyPress'|'onLongTouch'|'onShow'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onValueSuggest'|'onViewMove'|'onViewMoveEnd'|'onViewResize'|'onViewShow';
+type multisuggestEventName ="onAfterScroll"|"onBeforeShow"|"onBindRequest"|"onBlur"|"onDestruct"|"onEnter"|"onFocus"|"onHide"|"onKeyPress"|"onLongTouch"|"onShow"|"onSwipeX"|"onSwipeY"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onValueSuggest"|"onViewMove"|"onViewMoveEnd"|"onViewResize"|"onViewShow";
 export class multisuggest implements webix.ui.baseview{
 	adjust():void;
 	attachEvent(type:multisuggestEventName, functor:WebixCallback, id?:string):string|number;
@@ -7753,7 +7753,7 @@ interface multitextConfig{
 	value?: string|number;
 	width?: number;
 }
-type multitextEventName ='onAfterRender'|'onAfterScroll'|'onBeforeRender'|'onBindRequest'|'onBlur'|'onChange'|'onDestruct'|'onEnter'|'onFocus'|'onItemClick'|'onKeyPress'|'onLongTouch'|'onSectionAdd'|'onSectionRemove'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type multitextEventName ="onAfterRender"|"onAfterScroll"|"onBeforeRender"|"onBindRequest"|"onBlur"|"onChange"|"onDestruct"|"onEnter"|"onFocus"|"onItemClick"|"onKeyPress"|"onLongTouch"|"onSectionAdd"|"onSectionRemove"|"onSwipeX"|"onSwipeY"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class multitext implements webix.ui.baseview{
 	addSection(text?:string):string|number;
 	adjust():void;
@@ -7846,7 +7846,7 @@ interface multiviewConfig{
 	visibleBatch?: string;
 	width?: number;
 }
-type multiviewEventName ='onBeforeBack'|'onBindRequest'|'onDestruct'|'onViewChange'|'onViewShow';
+type multiviewEventName ="onBeforeBack"|"onBindRequest"|"onDestruct"|"onViewChange"|"onViewShow";
 export class multiview implements webix.ui.baseview{
 	addView(view:any, index?:number):string|number;
 	adjust():void;
@@ -7941,7 +7941,7 @@ interface organogramConfig{
 	url?: any;
 	width?: number;
 }
-type organogramEventName ='onAfterAdd'|'onAfterClose'|'onAfterContextMenu'|'onAfterDelete'|'onAfterLoad'|'onAfterOpen'|'onAfterRender'|'onAfterScroll'|'onAfterSelect'|'onAfterSort'|'onBeforeAdd'|'onBeforeClose'|'onBeforeContextMenu'|'onBeforeDelete'|'onBeforeLoad'|'onBeforeOpen'|'onBeforeRender'|'onBeforeSelect'|'onBeforeSort'|'onBindRequest'|'onBlur'|'onDataRequest'|'onDataUpdate'|'onDestruct'|'onEnter'|'onFocus'|'onItemCheck'|'onItemClick'|'onItemDblClick'|'onItemRender'|'onKeyPress'|'onLoadError'|'onLongTouch'|'onMouseMove'|'onMouseMoving'|'onMouseOut'|'onSelectChange'|'onSwipeX'|'onSwipeY'|'onTabFocus'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type organogramEventName ="onAfterAdd"|"onAfterClose"|"onAfterContextMenu"|"onAfterDelete"|"onAfterLoad"|"onAfterOpen"|"onAfterRender"|"onAfterScroll"|"onAfterSelect"|"onAfterSort"|"onBeforeAdd"|"onBeforeClose"|"onBeforeContextMenu"|"onBeforeDelete"|"onBeforeLoad"|"onBeforeOpen"|"onBeforeRender"|"onBeforeSelect"|"onBeforeSort"|"onBindRequest"|"onBlur"|"onDataRequest"|"onDataUpdate"|"onDestruct"|"onEnter"|"onFocus"|"onItemCheck"|"onItemClick"|"onItemDblClick"|"onItemRender"|"onKeyPress"|"onLoadError"|"onLongTouch"|"onMouseMove"|"onMouseMoving"|"onMouseOut"|"onSelectChange"|"onSwipeX"|"onSwipeY"|"onTabFocus"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class organogram implements webix.ui.baseview{
 	add(obj:any, index?:number):string|number;
 	addCss(id:string|number, css:string, silent?:boolean):void;
@@ -8082,7 +8082,7 @@ interface pagerConfig{
 	template?: string|WebixCallback;
 	width?: number;
 }
-type pagerEventName ='onAfterContextMenu'|'onAfterPageChange'|'onAfterRender'|'onAfterScroll'|'onBeforeContextMenu'|'onBeforePageChange'|'onBeforeRender'|'onBindRequest'|'onBlur'|'onDestruct'|'onEnter'|'onFocus'|'onItemClick'|'onItemDblClick'|'onKeyPress'|'onLongTouch'|'onMouseMove'|'onMouseMoving'|'onMouseOut'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type pagerEventName ="onAfterContextMenu"|"onAfterPageChange"|"onAfterRender"|"onAfterScroll"|"onBeforeContextMenu"|"onBeforePageChange"|"onBeforeRender"|"onBindRequest"|"onBlur"|"onDestruct"|"onEnter"|"onFocus"|"onItemClick"|"onItemDblClick"|"onKeyPress"|"onLongTouch"|"onMouseMove"|"onMouseMoving"|"onMouseOut"|"onSwipeX"|"onSwipeY"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class pager implements webix.ui.baseview{
 	adjust():void;
 	attachEvent(type:pagerEventName, functor:WebixCallback, id?:string):string|number;
@@ -8157,7 +8157,7 @@ interface panelConfig{
 	type?: string;
 	width?: number;
 }
-type panelEventName ='onBindRequest'|'onDestruct'|'onViewResize'|'onViewShow';
+type panelEventName ="onBindRequest"|"onDestruct"|"onViewResize"|"onViewShow";
 export class panel implements webix.ui.baseview{
 	adjust():void;
 	attachEvent(type:panelEventName, functor:WebixCallback, id?:string):string|number;
@@ -8222,7 +8222,7 @@ interface pdfviewerConfig{
 	url?: any;
 	width?: number;
 }
-type pdfviewerEventName ='onAfterLoad'|'onAfterScroll'|'onBeforeLoad'|'onBindRequest'|'onBlur'|'onDestruct'|'onDocumentReady'|'onEnter'|'onFocus'|'onKeyPress'|'onLoadError'|'onLongTouch'|'onPageRender'|'onScaleChange'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type pdfviewerEventName ="onAfterLoad"|"onAfterScroll"|"onBeforeLoad"|"onBindRequest"|"onBlur"|"onDestruct"|"onDocumentReady"|"onEnter"|"onFocus"|"onKeyPress"|"onLoadError"|"onLongTouch"|"onPageRender"|"onScaleChange"|"onSwipeX"|"onSwipeY"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class pdfviewer implements webix.ui.baseview{
 	adjust():void;
 	attachEvent(type:pdfviewerEventName, functor:WebixCallback, id?:string):string|number;
@@ -8330,7 +8330,7 @@ interface pivotConfig{
 	width?: number;
 	yScaleWidth?: number;
 }
-type pivotEventName ='onAfterAdd'|'onAfterDelete'|'onAfterLoad'|'onAfterSort'|'onBeforeAdd'|'onBeforeApply'|'onBeforeCancel'|'onBeforeDelete'|'onBeforeLoad'|'onBeforeRender'|'onBeforeSort'|'onBindRequest'|'onCancel'|'onDataRequest'|'onDataUpdate'|'onDestruct'|'onFilterChange'|'onFilterCreate'|'onHeaderInit'|'onItemClick'|'onLoadError'|'onPopup'|'onViewInit'|'onViewShow'|'onWebWorkerEnd'|'onWebWorkerStart';
+type pivotEventName ="onAfterAdd"|"onAfterDelete"|"onAfterLoad"|"onAfterSort"|"onBeforeAdd"|"onBeforeApply"|"onBeforeCancel"|"onBeforeDelete"|"onBeforeLoad"|"onBeforeRender"|"onBeforeSort"|"onBindRequest"|"onCancel"|"onDataRequest"|"onDataUpdate"|"onDestruct"|"onFilterChange"|"onFilterCreate"|"onHeaderInit"|"onItemClick"|"onLoadError"|"onPopup"|"onViewInit"|"onViewShow"|"onWebWorkerEnd"|"onWebWorkerStart";
 export class pivot implements webix.ui.baseview{
 	add(obj:any, index?:number):string|number;
 	addOperation(name:string, operation:WebixCallback, options:any):void;
@@ -8438,7 +8438,7 @@ interface popupConfig{
 	width?: number;
 	zIndex?: number;
 }
-type popupEventName ='onAfterScroll'|'onBeforeShow'|'onBindRequest'|'onBlur'|'onDestruct'|'onEnter'|'onFocus'|'onHide'|'onKeyPress'|'onLongTouch'|'onShow'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewMove'|'onViewMoveEnd'|'onViewResize'|'onViewShow';
+type popupEventName ="onAfterScroll"|"onBeforeShow"|"onBindRequest"|"onBlur"|"onDestruct"|"onEnter"|"onFocus"|"onHide"|"onKeyPress"|"onLongTouch"|"onShow"|"onSwipeX"|"onSwipeY"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewMove"|"onViewMoveEnd"|"onViewResize"|"onViewShow";
 export class popup implements webix.ui.baseview{
 	adjust():void;
 	attachEvent(type:popupEventName, functor:WebixCallback, id?:string):string|number;
@@ -8515,7 +8515,7 @@ interface portletConfig{
 	visibleBatch?: string;
 	width?: number;
 }
-type portletEventName ='onAfterPortletMove'|'onBeforePortletMove'|'onBindRequest'|'onDestruct'|'onViewShow';
+type portletEventName ="onAfterPortletMove"|"onBeforePortletMove"|"onBindRequest"|"onDestruct"|"onViewShow";
 export class portlet implements webix.ui.baseview{
 	addView(view:any, index?:number):string|number;
 	adjust():void;
@@ -8604,7 +8604,7 @@ interface propertyConfig{
 	url?: any;
 	width?: number;
 }
-type propertyEventName ='onAfterContextMenu'|'onAfterEditStart'|'onAfterEditStop'|'onAfterLoad'|'onAfterRender'|'onAfterScroll'|'onBeforeContextMenu'|'onBeforeEditStart'|'onBeforeEditStop'|'onBeforeLoad'|'onBeforeRender'|'onBindRequest'|'onBlur'|'onCheck'|'onDestruct'|'onEnter'|'onFocus'|'onItemClick'|'onItemDblClick'|'onKeyPress'|'onLiveEdit'|'onLoadError'|'onLongTouch'|'onMouseMove'|'onMouseMoving'|'onMouseOut'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type propertyEventName ="onAfterContextMenu"|"onAfterEditStart"|"onAfterEditStop"|"onAfterLoad"|"onAfterRender"|"onAfterScroll"|"onBeforeContextMenu"|"onBeforeEditStart"|"onBeforeEditStop"|"onBeforeLoad"|"onBeforeRender"|"onBindRequest"|"onBlur"|"onCheck"|"onDestruct"|"onEnter"|"onFocus"|"onItemClick"|"onItemDblClick"|"onKeyPress"|"onLiveEdit"|"onLoadError"|"onLongTouch"|"onMouseMove"|"onMouseMoving"|"onMouseOut"|"onSwipeX"|"onSwipeY"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class property implements webix.ui.baseview{
 	adjust():void;
 	attachEvent(type:propertyEventName, functor:WebixCallback, id?:string):string|number;
@@ -8698,7 +8698,7 @@ interface proxyConfig{
 	minWidth?: number;
 	width?: number;
 }
-type proxyEventName ='onAfterScroll'|'onBindRequest'|'onBlur'|'onDestruct'|'onEnter'|'onFocus'|'onKeyPress'|'onLongTouch'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type proxyEventName ="onAfterScroll"|"onBindRequest"|"onBlur"|"onDestruct"|"onEnter"|"onFocus"|"onKeyPress"|"onLongTouch"|"onSwipeX"|"onSwipeY"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class proxy implements webix.ui.baseview{
 	adjust():void;
 	bind(target:any, rule?:WebixCallback, format?:string):void;
@@ -8754,7 +8754,7 @@ interface queryConfig{
 	value?: any;
 	width?: number;
 }
-type queryEventName ='onAfterScroll'|'onBlur'|'onChange'|'onDestruct'|'onEnter'|'onFocus'|'onInit'|'onLongTouch'|'onSwipeX'|'onSwipeY'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type queryEventName ="onAfterScroll"|"onBlur"|"onChange"|"onDestruct"|"onEnter"|"onFocus"|"onInit"|"onLongTouch"|"onSwipeX"|"onSwipeY"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class query implements webix.ui.baseview{
 	adjust():void;
 	app(app:any):void;
@@ -8848,7 +8848,7 @@ interface radioConfig{
 	vertical?: boolean;
 	width?: number;
 }
-type radioEventName ='onAfterRender'|'onAfterScroll'|'onBeforeRender'|'onBindRequest'|'onBlur'|'onChange'|'onDestruct'|'onEnter'|'onFocus'|'onItemClick'|'onKeyPress'|'onLongTouch'|'onOptionAdd'|'onOptionRemove'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type radioEventName ="onAfterRender"|"onAfterScroll"|"onBeforeRender"|"onBindRequest"|"onBlur"|"onChange"|"onDestruct"|"onEnter"|"onFocus"|"onItemClick"|"onKeyPress"|"onLongTouch"|"onOptionAdd"|"onOptionRemove"|"onSwipeX"|"onSwipeY"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class radio implements webix.ui.baseview{
 	addOption(id:string|number, value:any, show?:boolean, index?:number):void;
 	adjust():void;
@@ -8992,7 +8992,7 @@ interface rangechartConfig{
 	yAxis?: any;
 	yValue?: string;
 }
-type rangechartEventName ='onAfterAdd'|'onAfterContextMenu'|'onAfterDelete'|'onAfterLoad'|'onAfterRangeChange'|'onAfterRender'|'onAfterScroll'|'onAfterSort'|'onBeforeAdd'|'onBeforeContextMenu'|'onBeforeDelete'|'onBeforeLoad'|'onBeforeRender'|'onBeforeSort'|'onBindRequest'|'onBlur'|'onDataRequest'|'onDataUpdate'|'onDestruct'|'onEnter'|'onFocus'|'onItemClick'|'onItemDblClick'|'onKeyPress'|'onLegendClick'|'onLoadError'|'onLongTouch'|'onMouseMove'|'onMouseMoving'|'onMouseOut'|'onSwipeX'|'onSwipeY'|'onTabFocus'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type rangechartEventName ="onAfterAdd"|"onAfterContextMenu"|"onAfterDelete"|"onAfterLoad"|"onAfterRangeChange"|"onAfterRender"|"onAfterScroll"|"onAfterSort"|"onBeforeAdd"|"onBeforeContextMenu"|"onBeforeDelete"|"onBeforeLoad"|"onBeforeRender"|"onBeforeSort"|"onBindRequest"|"onBlur"|"onDataRequest"|"onDataUpdate"|"onDestruct"|"onEnter"|"onFocus"|"onItemClick"|"onItemDblClick"|"onKeyPress"|"onLegendClick"|"onLoadError"|"onLongTouch"|"onMouseMove"|"onMouseMoving"|"onMouseOut"|"onSwipeX"|"onSwipeY"|"onTabFocus"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class rangechart implements webix.ui.baseview{
 	add(obj:any, index?:number):string|number;
 	addSeries(obj:any):void;
@@ -9129,7 +9129,7 @@ interface rangesliderConfig{
 	vertical?: boolean;
 	width?: number;
 }
-type rangesliderEventName ='onAfterRender'|'onAfterScroll'|'onBeforeRender'|'onBindRequest'|'onBlur'|'onChange'|'onDestruct'|'onEnter'|'onFocus'|'onItemClick'|'onKeyPress'|'onLongTouch'|'onSliderDrag'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type rangesliderEventName ="onAfterRender"|"onAfterScroll"|"onBeforeRender"|"onBindRequest"|"onBlur"|"onChange"|"onDestruct"|"onEnter"|"onFocus"|"onItemClick"|"onKeyPress"|"onLongTouch"|"onSliderDrag"|"onSwipeX"|"onSwipeY"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class rangeslider implements webix.ui.baseview{
 	adjust():void;
 	attachEvent(type:rangesliderEventName, functor:WebixCallback, id?:string):string|number;
@@ -9214,7 +9214,7 @@ interface resizerConfig{
 	onContext?: { [key: string]: any; };
 	width?: number;
 }
-type resizerEventName ='onViewShow';
+type resizerEventName ="onViewShow";
 export class resizer implements webix.ui.baseview{
 	adjust():void;
 	bind(target:any, rule?:WebixCallback, format?:string):void;
@@ -9277,7 +9277,7 @@ interface reportsConfig{
 	url?: string;
 	width?: number;
 }
-type reportsEventName ='onAfterScroll'|'onBindRequest'|'onBlur'|'onDestruct'|'onEnter'|'onFocus'|'onInit'|'onKeyPress'|'onLongTouch'|'onSwipeX'|'onSwipeY'|'onTabFocus'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type reportsEventName ="onAfterScroll"|"onBindRequest"|"onBlur"|"onDestruct"|"onEnter"|"onFocus"|"onInit"|"onKeyPress"|"onLongTouch"|"onSwipeX"|"onSwipeY"|"onTabFocus"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class reports implements webix.ui.baseview{
 	adjust():void;
 	app(app:any):void;
@@ -9370,7 +9370,7 @@ interface richselectConfig{
 	value?: string|number;
 	width?: number;
 }
-type richselectEventName ='onAfterRender'|'onAfterScroll'|'onBeforeRender'|'onBindRequest'|'onBlur'|'onChange'|'onDestruct'|'onEnter'|'onFocus'|'onItemClick'|'onKeyPress'|'onLongTouch'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type richselectEventName ="onAfterRender"|"onAfterScroll"|"onBeforeRender"|"onBindRequest"|"onBlur"|"onChange"|"onDestruct"|"onEnter"|"onFocus"|"onItemClick"|"onKeyPress"|"onLongTouch"|"onSwipeX"|"onSwipeY"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class richselect implements webix.ui.baseview{
 	adjust():void;
 	attachEvent(type:richselectEventName, functor:WebixCallback, id?:string):string|number;
@@ -9463,7 +9463,7 @@ interface richtextConfig{
 	value?: string|number;
 	width?: number;
 }
-type richtextEventName ='onBindRequest'|'onChange'|'onDestruct'|'onViewShow';
+type richtextEventName ="onBindRequest"|"onChange"|"onDestruct"|"onViewShow";
 export class richtext implements webix.ui.baseview{
 	adjust():void;
 	attachEvent(type:richtextEventName, functor:WebixCallback, id?:string):string|number;
@@ -9531,7 +9531,7 @@ interface scrollviewConfig{
 	scrollSpeed?: string;
 	width?: number;
 }
-type scrollviewEventName ='onAfterScroll'|'onBindRequest'|'onBlur'|'onDestruct'|'onEnter'|'onFocus'|'onKeyPress'|'onLongTouch'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type scrollviewEventName ="onAfterScroll"|"onBindRequest"|"onBlur"|"onDestruct"|"onEnter"|"onFocus"|"onKeyPress"|"onLongTouch"|"onSwipeX"|"onSwipeY"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class scrollview implements webix.ui.baseview{
 	adjust():void;
 	attachEvent(type:scrollviewEventName, functor:WebixCallback, id?:string):string|number;
@@ -9626,7 +9626,7 @@ interface searchConfig{
 	value?: string|number;
 	width?: number;
 }
-type searchEventName ='onAfterRender'|'onAfterScroll'|'onBeforeRender'|'onBindRequest'|'onBlur'|'onChange'|'onDestruct'|'onEnter'|'onFocus'|'onItemClick'|'onKeyPress'|'onLongTouch'|'onSearchIconClick'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type searchEventName ="onAfterRender"|"onAfterScroll"|"onBeforeRender"|"onBindRequest"|"onBlur"|"onChange"|"onDestruct"|"onEnter"|"onFocus"|"onItemClick"|"onKeyPress"|"onLongTouch"|"onSearchIconClick"|"onSwipeX"|"onSwipeY"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class search implements webix.ui.baseview{
 	adjust():void;
 	attachEvent(type:searchEventName, functor:WebixCallback, id?:string):string|number;
@@ -9737,7 +9737,7 @@ interface segmentedConfig{
 	value?: string|number;
 	width?: number;
 }
-type segmentedEventName ='onAfterRender'|'onAfterScroll'|'onAfterTabClick'|'onBeforeRender'|'onBeforeTabClick'|'onBindRequest'|'onBlur'|'onChange'|'onDestruct'|'onEnter'|'onFocus'|'onItemClick'|'onKeyPress'|'onLongTouch'|'onOptionAdd'|'onOptionRemove'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type segmentedEventName ="onAfterRender"|"onAfterScroll"|"onAfterTabClick"|"onBeforeRender"|"onBeforeTabClick"|"onBindRequest"|"onBlur"|"onChange"|"onDestruct"|"onEnter"|"onFocus"|"onItemClick"|"onKeyPress"|"onLongTouch"|"onOptionAdd"|"onOptionRemove"|"onSwipeX"|"onSwipeY"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class segmented implements webix.ui.baseview{
 	addOption(id:string|number, value:any, show?:boolean, index?:number):void;
 	adjust():void;
@@ -9857,7 +9857,7 @@ interface selectConfig{
 	value?: string|number;
 	width?: number;
 }
-type selectEventName ='onAfterRender'|'onAfterScroll'|'onBeforeRender'|'onBindRequest'|'onBlur'|'onChange'|'onDestruct'|'onEnter'|'onFocus'|'onItemClick'|'onKeyPress'|'onLongTouch'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type selectEventName ="onAfterRender"|"onAfterScroll"|"onBeforeRender"|"onBindRequest"|"onBlur"|"onChange"|"onDestruct"|"onEnter"|"onFocus"|"onItemClick"|"onKeyPress"|"onLongTouch"|"onSwipeX"|"onSwipeY"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class select implements webix.ui.baseview{
 	adjust():void;
 	attachEvent(type:selectEventName, functor:WebixCallback, id?:string):string|number;
@@ -9978,7 +9978,7 @@ interface sidebarConfig{
 	url?: any;
 	width?: number;
 }
-type sidebarEventName ='onAfterAdd'|'onAfterClose'|'onAfterContextMenu'|'onAfterDelete'|'onAfterDrop'|'onAfterLoad'|'onAfterOpen'|'onAfterRender'|'onAfterScroll'|'onAfterSelect'|'onAfterSort'|'onBeforeAdd'|'onBeforeClose'|'onBeforeContextMenu'|'onBeforeDelete'|'onBeforeDrag'|'onBeforeDragIn'|'onBeforeDrop'|'onBeforeDropOut'|'onBeforeLoad'|'onBeforeOpen'|'onBeforeRender'|'onBeforeSelect'|'onBeforeSort'|'onBindRequest'|'onBlur'|'onDataRequest'|'onDataUpdate'|'onDestruct'|'onDragOut'|'onEnter'|'onFocus'|'onItemCheck'|'onItemClick'|'onItemDblClick'|'onItemRender'|'onKeyPress'|'onLoadError'|'onLongTouch'|'onMouseMove'|'onMouseMoving'|'onMouseOut'|'onPartialRender'|'onPaste'|'onSelectChange'|'onSwipeX'|'onSwipeY'|'onTabFocus'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onValidationError'|'onValidationSuccess'|'onViewResize'|'onViewShow';
+type sidebarEventName ="onAfterAdd"|"onAfterClose"|"onAfterContextMenu"|"onAfterDelete"|"onAfterDrop"|"onAfterLoad"|"onAfterOpen"|"onAfterRender"|"onAfterScroll"|"onAfterSelect"|"onAfterSort"|"onBeforeAdd"|"onBeforeClose"|"onBeforeContextMenu"|"onBeforeDelete"|"onBeforeDrag"|"onBeforeDragIn"|"onBeforeDrop"|"onBeforeDropOut"|"onBeforeLoad"|"onBeforeOpen"|"onBeforeRender"|"onBeforeSelect"|"onBeforeSort"|"onBindRequest"|"onBlur"|"onDataRequest"|"onDataUpdate"|"onDestruct"|"onDragOut"|"onEnter"|"onFocus"|"onItemCheck"|"onItemClick"|"onItemDblClick"|"onItemRender"|"onKeyPress"|"onLoadError"|"onLongTouch"|"onMouseMove"|"onMouseMoving"|"onMouseOut"|"onPartialRender"|"onPaste"|"onSelectChange"|"onSwipeX"|"onSwipeY"|"onTabFocus"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onValidationError"|"onValidationSuccess"|"onViewResize"|"onViewShow";
 export class sidebar implements webix.ui.baseview{
 	add(obj:any, index?:number):string|number;
 	addCss(id:string|number, css:string, silent?:boolean):void;
@@ -10151,7 +10151,7 @@ interface sidemenuConfig{
 	width?: number;
 	zIndex?: number;
 }
-type sidemenuEventName ='onAfterScroll'|'onBeforeShow'|'onBindRequest'|'onBlur'|'onDestruct'|'onEnter'|'onFocus'|'onHide'|'onKeyPress'|'onLongTouch'|'onShow'|'onSwipeX'|'onSwipeY'|'onTabFocus'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewMove'|'onViewMoveEnd'|'onViewResize'|'onViewShow';
+type sidemenuEventName ="onAfterScroll"|"onBeforeShow"|"onBindRequest"|"onBlur"|"onDestruct"|"onEnter"|"onFocus"|"onHide"|"onKeyPress"|"onLongTouch"|"onShow"|"onSwipeX"|"onSwipeY"|"onTabFocus"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewMove"|"onViewMoveEnd"|"onViewResize"|"onViewShow";
 export class sidemenu implements webix.ui.baseview{
 	adjust():void;
 	attachEvent(type:sidemenuEventName, functor:WebixCallback, id?:string):string|number;
@@ -10229,7 +10229,7 @@ interface schedulerConfig{
 	url?: string;
 	width?: number;
 }
-type schedulerEventName ='onAfterScroll'|'onBindRequest'|'onBlur'|'onChange'|'onDestruct'|'onEnter'|'onFocus'|'onInit'|'onKeyPress'|'onLongTouch'|'onSwipeX'|'onSwipeY'|'onTabFocus'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type schedulerEventName ="onAfterScroll"|"onBindRequest"|"onBlur"|"onChange"|"onDestruct"|"onEnter"|"onFocus"|"onInit"|"onKeyPress"|"onLongTouch"|"onSwipeX"|"onSwipeY"|"onTabFocus"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class scheduler implements webix.ui.baseview{
 	adjust():void;
 	app(app:any):void;
@@ -10322,7 +10322,7 @@ interface sliderConfig{
 	vertical?: boolean;
 	width?: number;
 }
-type sliderEventName ='onAfterRender'|'onAfterScroll'|'onBeforeRender'|'onBindRequest'|'onBlur'|'onChange'|'onDestruct'|'onEnter'|'onFocus'|'onItemClick'|'onKeyPress'|'onLongTouch'|'onSliderDrag'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type sliderEventName ="onAfterRender"|"onAfterScroll"|"onBeforeRender"|"onBindRequest"|"onBlur"|"onChange"|"onDestruct"|"onEnter"|"onFocus"|"onItemClick"|"onKeyPress"|"onLongTouch"|"onSliderDrag"|"onSwipeX"|"onSwipeY"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class slider implements webix.ui.baseview{
 	adjust():void;
 	attachEvent(type:sliderEventName, functor:WebixCallback, id?:string):string|number;
@@ -10405,7 +10405,7 @@ interface spacerConfig{
 	minWidth?: number;
 	width?: number;
 }
-type spacerEventName ='onAfterScroll'|'onBindRequest'|'onBlur'|'onDestruct'|'onEnter'|'onFocus'|'onKeyPress'|'onLongTouch'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type spacerEventName ="onAfterScroll"|"onBindRequest"|"onBlur"|"onDestruct"|"onEnter"|"onFocus"|"onKeyPress"|"onLongTouch"|"onSwipeX"|"onSwipeY"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class spacer implements webix.ui.baseview{
 	adjust():void;
 	bind(target:any, rule?:WebixCallback, format?:string):void;
@@ -10478,7 +10478,7 @@ interface spreadsheetConfig{
 	url?: any;
 	width?: number;
 }
-type spreadsheetEventName ='onAfterConditionSet'|'onAfterLoad'|'onAfterRangeSet'|'onAfterSelect'|'onAfterSheetShow'|'onAfterSpan'|'onAfterSplit'|'onBeforeCommentShow'|'onBeforeLoad'|'onBeforeSheetShow'|'onBeforeSpan'|'onBeforeSplit'|'onBeforeValueChange'|'onBindRequest'|'onCellChange'|'onChange'|'onCommentHide'|'onComponentInit'|'onDataParse'|'onDataSerialize'|'onDestruct'|'onLoadError'|'onMathRefresh'|'onReset'|'onSheetAdd'|'onSheetRemove'|'onSheetRename'|'onStyleSet'|'onUIEditStart'|'onUIEditStop'|'onViewInit'|'onViewShow';
+type spreadsheetEventName ="onAfterConditionSet"|"onAfterLoad"|"onAfterRangeSet"|"onAfterSelect"|"onAfterSheetShow"|"onAfterSpan"|"onAfterSplit"|"onBeforeCommentShow"|"onBeforeLoad"|"onBeforeSheetShow"|"onBeforeSpan"|"onBeforeSplit"|"onBeforeValueChange"|"onBindRequest"|"onCellChange"|"onChange"|"onCommentHide"|"onComponentInit"|"onDataParse"|"onDataSerialize"|"onDestruct"|"onLoadError"|"onMathRefresh"|"onReset"|"onSheetAdd"|"onSheetRemove"|"onSheetRename"|"onStyleSet"|"onUIEditStart"|"onUIEditStop"|"onViewInit"|"onViewShow";
 export class spreadsheet implements webix.ui.baseview{
 	addImage(rowId:number, columnId:number, url:string):void;
 	addSheet(content:any):void;
@@ -10664,7 +10664,7 @@ interface submenuConfig{
 	yCount?: number;
 	zIndex?: number;
 }
-type submenuEventName ='onAfterAdd'|'onAfterContextMenu'|'onAfterDelete'|'onAfterDrop'|'onAfterLoad'|'onAfterRender'|'onAfterScroll'|'onAfterSelect'|'onAfterSort'|'onBeforeAdd'|'onBeforeContextMenu'|'onBeforeDelete'|'onBeforeDrag'|'onBeforeDragIn'|'onBeforeDrop'|'onBeforeDropOut'|'onBeforeLoad'|'onBeforeRender'|'onBeforeSelect'|'onBeforeShow'|'onBeforeSort'|'onBindRequest'|'onBlur'|'onDataRequest'|'onDataUpdate'|'onDestruct'|'onDragOut'|'onEnter'|'onFocus'|'onHide'|'onItemClick'|'onItemDblClick'|'onItemRender'|'onKeyPress'|'onLoadError'|'onLongTouch'|'onMenuItemClick'|'onMouseMove'|'onMouseMoving'|'onMouseOut'|'onPaste'|'onSelectChange'|'onShow'|'onSwipeX'|'onSwipeY'|'onTabFocus'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onValidationError'|'onValidationSuccess'|'onViewMove'|'onViewMoveEnd'|'onViewResize'|'onViewShow';
+type submenuEventName ="onAfterAdd"|"onAfterContextMenu"|"onAfterDelete"|"onAfterDrop"|"onAfterLoad"|"onAfterRender"|"onAfterScroll"|"onAfterSelect"|"onAfterSort"|"onBeforeAdd"|"onBeforeContextMenu"|"onBeforeDelete"|"onBeforeDrag"|"onBeforeDragIn"|"onBeforeDrop"|"onBeforeDropOut"|"onBeforeLoad"|"onBeforeRender"|"onBeforeSelect"|"onBeforeShow"|"onBeforeSort"|"onBindRequest"|"onBlur"|"onDataRequest"|"onDataUpdate"|"onDestruct"|"onDragOut"|"onEnter"|"onFocus"|"onHide"|"onItemClick"|"onItemDblClick"|"onItemRender"|"onKeyPress"|"onLoadError"|"onLongTouch"|"onMenuItemClick"|"onMouseMove"|"onMouseMoving"|"onMouseOut"|"onPaste"|"onSelectChange"|"onShow"|"onSwipeX"|"onSwipeY"|"onTabFocus"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onValidationError"|"onValidationSuccess"|"onViewMove"|"onViewMoveEnd"|"onViewResize"|"onViewShow";
 export class submenu implements webix.ui.baseview{
 	add(obj:any, index?:number):string|number;
 	addCss(id:string|number, css:string, silent?:boolean):void;
@@ -10838,7 +10838,7 @@ interface suggestConfig{
 	width?: number;
 	zIndex?: number;
 }
-type suggestEventName ='onAfterScroll'|'onBeforeShow'|'onBindRequest'|'onBlur'|'onDestruct'|'onEnter'|'onFocus'|'onHide'|'onKeyPress'|'onLongTouch'|'onShow'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onValueSuggest'|'onViewMove'|'onViewMoveEnd'|'onViewResize'|'onViewShow';
+type suggestEventName ="onAfterScroll"|"onBeforeShow"|"onBindRequest"|"onBlur"|"onDestruct"|"onEnter"|"onFocus"|"onHide"|"onKeyPress"|"onLongTouch"|"onShow"|"onSwipeX"|"onSwipeY"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onValueSuggest"|"onViewMove"|"onViewMoveEnd"|"onViewResize"|"onViewShow";
 export class suggest implements webix.ui.baseview{
 	adjust():void;
 	attachEvent(type:suggestEventName, functor:WebixCallback, id?:string):string|number;
@@ -10950,7 +10950,7 @@ interface switchButtonConfig{
 	value?: string|number|boolean;
 	width?: number;
 }
-type switchButtonEventName ='onAfterRender'|'onAfterScroll'|'onBeforeRender'|'onBindRequest'|'onBlur'|'onChange'|'onDestruct'|'onEnter'|'onFocus'|'onItemClick'|'onKeyPress'|'onLongTouch'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type switchButtonEventName ="onAfterRender"|"onAfterScroll"|"onBeforeRender"|"onBindRequest"|"onBlur"|"onChange"|"onDestruct"|"onEnter"|"onFocus"|"onItemClick"|"onKeyPress"|"onLongTouch"|"onSwipeX"|"onSwipeY"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class switchButton implements webix.ui.baseview{
 	adjust():void;
 	attachEvent(type:switchButtonEventName, functor:WebixCallback, id?:string):string|number;
@@ -11077,7 +11077,7 @@ interface tabbarConfig{
 	width?: number;
 	yCount?: number;
 }
-type tabbarEventName ='onAfterRender'|'onAfterScroll'|'onAfterTabClick'|'onBeforeRender'|'onBeforeTabClick'|'onBeforeTabClose'|'onBindRequest'|'onBlur'|'onChange'|'onDestruct'|'onEnter'|'onFocus'|'onItemClick'|'onKeyPress'|'onLongTouch'|'onOptionAdd'|'onOptionRemove'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type tabbarEventName ="onAfterRender"|"onAfterScroll"|"onAfterTabClick"|"onBeforeRender"|"onBeforeTabClick"|"onBeforeTabClose"|"onBindRequest"|"onBlur"|"onChange"|"onDestruct"|"onEnter"|"onFocus"|"onItemClick"|"onKeyPress"|"onLongTouch"|"onOptionAdd"|"onOptionRemove"|"onSwipeX"|"onSwipeY"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class tabbar implements webix.ui.baseview{
 	addOption(id:string|number, value:any, show?:boolean, index?:number):void;
 	adjust():void;
@@ -11175,7 +11175,7 @@ interface tabviewConfig{
 	type?: string;
 	width?: number;
 }
-type tabviewEventName ='onBindRequest'|'onDestruct'|'onViewShow';
+type tabviewEventName ="onBindRequest"|"onDestruct"|"onViewShow";
 export class tabview implements webix.ui.baseview{
 	addView(obj:any):void;
 	adjust():void;
@@ -11250,7 +11250,7 @@ interface templateConfig{
 	url?: any;
 	width?: number;
 }
-type templateEventName ='onAfterLoad'|'onAfterRender'|'onAfterScroll'|'onBeforeLoad'|'onBeforeRender'|'onBindRequest'|'onBlur'|'onDestruct'|'onEnter'|'onFocus'|'onKeyPress'|'onLoadError'|'onLongTouch'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type templateEventName ="onAfterLoad"|"onAfterRender"|"onAfterScroll"|"onBeforeLoad"|"onBeforeRender"|"onBindRequest"|"onBlur"|"onDestruct"|"onEnter"|"onFocus"|"onKeyPress"|"onLoadError"|"onLongTouch"|"onSwipeX"|"onSwipeY"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class template implements webix.ui.baseview{
 	adjust():void;
 	attachEvent(type:templateEventName, functor:WebixCallback, id?:string):string|number;
@@ -11353,7 +11353,7 @@ interface textConfig{
 	value?: string|number;
 	width?: number;
 }
-type textEventName ='onAfterRender'|'onAfterScroll'|'onBeforeRender'|'onBindRequest'|'onBlur'|'onChange'|'onDestruct'|'onEnter'|'onFocus'|'onItemClick'|'onKeyPress'|'onLongTouch'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type textEventName ="onAfterRender"|"onAfterScroll"|"onBeforeRender"|"onBindRequest"|"onBlur"|"onChange"|"onDestruct"|"onEnter"|"onFocus"|"onItemClick"|"onKeyPress"|"onLongTouch"|"onSwipeX"|"onSwipeY"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class text implements webix.ui.baseview{
 	adjust():void;
 	attachEvent(type:textEventName, functor:WebixCallback, id?:string):string|number;
@@ -11465,7 +11465,7 @@ interface textareaConfig{
 	value?: string|number;
 	width?: number;
 }
-type textareaEventName ='onAfterRender'|'onAfterScroll'|'onBeforeRender'|'onBindRequest'|'onBlur'|'onChange'|'onDestruct'|'onEnter'|'onFocus'|'onItemClick'|'onKeyPress'|'onLongTouch'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type textareaEventName ="onAfterRender"|"onAfterScroll"|"onBeforeRender"|"onBindRequest"|"onBlur"|"onChange"|"onDestruct"|"onEnter"|"onFocus"|"onItemClick"|"onKeyPress"|"onLongTouch"|"onSwipeX"|"onSwipeY"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class textarea implements webix.ui.baseview{
 	adjust():void;
 	attachEvent(type:textareaEventName, functor:WebixCallback, id?:string):string|number;
@@ -11582,7 +11582,7 @@ interface texthighlightConfig{
 	value?: string|number;
 	width?: number;
 }
-type texthighlightEventName ='onAfterRender'|'onAfterScroll'|'onBeforeRender'|'onBindRequest'|'onBlur'|'onChange'|'onDestruct'|'onEnter'|'onFocus'|'onItemClick'|'onKeyPress'|'onLongTouch'|'onSwipeX'|'onSwipeY'|'onTabFocus'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type texthighlightEventName ="onAfterRender"|"onAfterScroll"|"onBeforeRender"|"onBindRequest"|"onBlur"|"onChange"|"onDestruct"|"onEnter"|"onFocus"|"onItemClick"|"onKeyPress"|"onLongTouch"|"onSwipeX"|"onSwipeY"|"onTabFocus"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class texthighlight implements webix.ui.baseview{
 	adjust():void;
 	attachEvent(type:texthighlightEventName, functor:WebixCallback, id?:string):string|number;
@@ -11674,7 +11674,7 @@ interface timeboardConfig{
 	value?: any;
 	width?: number;
 }
-type timeboardEventName ='onBindRequest'|'onChange'|'onDestruct'|'onTimeSelect'|'onViewShow';
+type timeboardEventName ="onBindRequest"|"onChange"|"onDestruct"|"onTimeSelect"|"onViewShow";
 export class timeboard implements webix.ui.baseview{
 	adjust():void;
 	attachEvent(type:timeboardEventName, functor:WebixCallback, id?:string):string|number;
@@ -11760,7 +11760,7 @@ interface timelineConfig{
 	url?: any;
 	width?: number;
 }
-type timelineEventName ='onAfterAdd'|'onAfterContextMenu'|'onAfterDelete'|'onAfterLoad'|'onAfterRender'|'onAfterScroll'|'onAfterSort'|'onBeforeAdd'|'onBeforeContextMenu'|'onBeforeDelete'|'onBeforeLoad'|'onBeforeRender'|'onBeforeSort'|'onBindRequest'|'onDataRequest'|'onDataUpdate'|'onDestruct'|'onItemClick'|'onItemDblClick'|'onItemRender'|'onLoadError'|'onMouseMove'|'onMouseMoving'|'onMouseOut'|'onViewShow';
+type timelineEventName ="onAfterAdd"|"onAfterContextMenu"|"onAfterDelete"|"onAfterLoad"|"onAfterRender"|"onAfterScroll"|"onAfterSort"|"onBeforeAdd"|"onBeforeContextMenu"|"onBeforeDelete"|"onBeforeLoad"|"onBeforeRender"|"onBeforeSort"|"onBindRequest"|"onDataRequest"|"onDataUpdate"|"onDestruct"|"onItemClick"|"onItemDblClick"|"onItemRender"|"onLoadError"|"onMouseMove"|"onMouseMoving"|"onMouseOut"|"onViewShow";
 export class timeline implements webix.ui.baseview{
 	add(obj:any, index?:number):string|number;
 	adjust():void;
@@ -11874,7 +11874,7 @@ interface toggleConfig{
 	value?: string|number|boolean;
 	width?: number;
 }
-type toggleEventName ='onAfterRender'|'onAfterScroll'|'onBeforeRender'|'onBindRequest'|'onBlur'|'onChange'|'onDestruct'|'onEnter'|'onFocus'|'onItemClick'|'onKeyPress'|'onLongTouch'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type toggleEventName ="onAfterRender"|"onAfterScroll"|"onBeforeRender"|"onBindRequest"|"onBlur"|"onChange"|"onDestruct"|"onEnter"|"onFocus"|"onItemClick"|"onKeyPress"|"onLongTouch"|"onSwipeX"|"onSwipeY"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class toggle implements webix.ui.baseview{
 	adjust():void;
 	attachEvent(type:toggleEventName, functor:WebixCallback, id?:string):string|number;
@@ -11971,7 +11971,7 @@ interface toolbarConfig{
 	visibleBatch?: string;
 	width?: number;
 }
-type toolbarEventName ='onAfterLoad'|'onAfterScroll'|'onAfterValidation'|'onBeforeLoad'|'onBeforeValidate'|'onBindRequest'|'onChange'|'onDestruct'|'onLoadError'|'onValidationError'|'onValidationSuccess'|'onValues'|'onViewShow';
+type toolbarEventName ="onAfterLoad"|"onAfterScroll"|"onAfterValidation"|"onBeforeLoad"|"onBeforeValidate"|"onBindRequest"|"onChange"|"onDestruct"|"onLoadError"|"onValidationError"|"onValidationSuccess"|"onValues"|"onViewShow";
 export class toolbar implements webix.ui.baseview{
 	addView(view:any, index?:number):string|number;
 	adjust():void;
@@ -12056,7 +12056,7 @@ interface tooltipConfig{
 	template?: string|WebixCallback;
 	width?: number;
 }
-type tooltipEventName ='onAfterRender'|'onAfterScroll'|'onBeforeRender'|'onBindRequest'|'onBlur'|'onDestruct'|'onEnter'|'onFocus'|'onKeyPress'|'onLongTouch'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type tooltipEventName ="onAfterRender"|"onAfterScroll"|"onBeforeRender"|"onBindRequest"|"onBlur"|"onDestruct"|"onEnter"|"onFocus"|"onKeyPress"|"onLongTouch"|"onSwipeX"|"onSwipeY"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export interface tooltip{
 	adjust():void;
 	attachEvent(type:tooltipEventName, functor:WebixCallback, id?:string):string|number;
@@ -12146,7 +12146,7 @@ interface treeConfig{
 	url?: any;
 	width?: number;
 }
-type treeEventName ='onAfterAdd'|'onAfterClose'|'onAfterContextMenu'|'onAfterDelete'|'onAfterDrop'|'onAfterLoad'|'onAfterOpen'|'onAfterRender'|'onAfterScroll'|'onAfterSelect'|'onAfterSort'|'onBeforeAdd'|'onBeforeClose'|'onBeforeContextMenu'|'onBeforeDelete'|'onBeforeDrag'|'onBeforeDragIn'|'onBeforeDrop'|'onBeforeDropOut'|'onBeforeLoad'|'onBeforeOpen'|'onBeforeRender'|'onBeforeSelect'|'onBeforeSort'|'onBindRequest'|'onBlur'|'onDataRequest'|'onDataUpdate'|'onDestruct'|'onDragOut'|'onEnter'|'onFocus'|'onItemCheck'|'onItemClick'|'onItemDblClick'|'onItemRender'|'onKeyPress'|'onLoadError'|'onLongTouch'|'onMouseMove'|'onMouseMoving'|'onMouseOut'|'onPartialRender'|'onPaste'|'onSelectChange'|'onSwipeX'|'onSwipeY'|'onTabFocus'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onValidationError'|'onValidationSuccess'|'onViewResize'|'onViewShow';
+type treeEventName ="onAfterAdd"|"onAfterClose"|"onAfterContextMenu"|"onAfterDelete"|"onAfterDrop"|"onAfterLoad"|"onAfterOpen"|"onAfterRender"|"onAfterScroll"|"onAfterSelect"|"onAfterSort"|"onBeforeAdd"|"onBeforeClose"|"onBeforeContextMenu"|"onBeforeDelete"|"onBeforeDrag"|"onBeforeDragIn"|"onBeforeDrop"|"onBeforeDropOut"|"onBeforeLoad"|"onBeforeOpen"|"onBeforeRender"|"onBeforeSelect"|"onBeforeSort"|"onBindRequest"|"onBlur"|"onDataRequest"|"onDataUpdate"|"onDestruct"|"onDragOut"|"onEnter"|"onFocus"|"onItemCheck"|"onItemClick"|"onItemDblClick"|"onItemRender"|"onKeyPress"|"onLoadError"|"onLongTouch"|"onMouseMove"|"onMouseMoving"|"onMouseOut"|"onPartialRender"|"onPaste"|"onSelectChange"|"onSwipeX"|"onSwipeY"|"onTabFocus"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onValidationError"|"onValidationSuccess"|"onViewResize"|"onViewShow";
 export class tree implements webix.ui.baseview{
 	add(obj:any, index?:number, parentId?:string):string;
 	addCss(id:string|number, css:string, silent?:boolean):void;
@@ -12330,7 +12330,7 @@ interface treemapConfig{
 	value?: string|WebixCallback;
 	width?: number;
 }
-type treemapEventName ='onAfterAdd'|'onAfterClose'|'onAfterContextMenu'|'onAfterDelete'|'onAfterLoad'|'onAfterOpen'|'onAfterRender'|'onAfterScroll'|'onAfterSelect'|'onAfterSort'|'onBeforeAdd'|'onBeforeClose'|'onBeforeContextMenu'|'onBeforeDelete'|'onBeforeLoad'|'onBeforeOpen'|'onBeforeRender'|'onBeforeSelect'|'onBeforeSort'|'onBindRequest'|'onBlur'|'onDataRequest'|'onDataUpdate'|'onDestruct'|'onEnter'|'onFocus'|'onItemCheck'|'onItemClick'|'onItemDblClick'|'onItemRender'|'onKeyPress'|'onLoadError'|'onLongTouch'|'onMouseMove'|'onMouseMoving'|'onMouseOut'|'onPartialRender'|'onPaste'|'onSelectChange'|'onSwipeX'|'onSwipeY'|'onTabFocus'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onValidationError'|'onValidationSuccess'|'onViewResize'|'onViewShow';
+type treemapEventName ="onAfterAdd"|"onAfterClose"|"onAfterContextMenu"|"onAfterDelete"|"onAfterLoad"|"onAfterOpen"|"onAfterRender"|"onAfterScroll"|"onAfterSelect"|"onAfterSort"|"onBeforeAdd"|"onBeforeClose"|"onBeforeContextMenu"|"onBeforeDelete"|"onBeforeLoad"|"onBeforeOpen"|"onBeforeRender"|"onBeforeSelect"|"onBeforeSort"|"onBindRequest"|"onBlur"|"onDataRequest"|"onDataUpdate"|"onDestruct"|"onEnter"|"onFocus"|"onItemCheck"|"onItemClick"|"onItemDblClick"|"onItemRender"|"onKeyPress"|"onLoadError"|"onLongTouch"|"onMouseMove"|"onMouseMoving"|"onMouseOut"|"onPartialRender"|"onPaste"|"onSelectChange"|"onSwipeX"|"onSwipeY"|"onTabFocus"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onValidationError"|"onValidationSuccess"|"onViewResize"|"onViewShow";
 export class treemap implements webix.ui.baseview{
 	add(obj:any, index?:number):string|number;
 	addCss(id:string|number, css:string, silent?:boolean):void;
@@ -12539,7 +12539,7 @@ interface treetableConfig{
 	width?: number;
 	yCount?: number;
 }
-type treetableEventName ='onAfterAdd'|'onAfterAreaAdd'|'onAfterAreaRemove'|'onAfterBlockSelect'|'onAfterClose'|'onAfterColumnDrop'|'onAfterColumnDropOrder'|'onAfterColumnHide'|'onAfterColumnShow'|'onAfterContextMenu'|'onAfterDelete'|'onAfterDrop'|'onAfterEditStart'|'onAfterEditStop'|'onAfterFilter'|'onAfterLoad'|'onAfterOpen'|'onAfterRender'|'onAfterScroll'|'onAfterSelect'|'onAfterSort'|'onAfterUnSelect'|'onAreaDrag'|'onBeforeAdd'|'onBeforeAreaAdd'|'onBeforeAreaRemove'|'onBeforeBlockSelect'|'onBeforeClose'|'onBeforeColumnDrag'|'onBeforeColumnDrop'|'onBeforeColumnDropOrder'|'onBeforeColumnHide'|'onBeforeColumnShow'|'onBeforeContextMenu'|'onBeforeDelete'|'onBeforeDrag'|'onBeforeDragIn'|'onBeforeDrop'|'onBeforeDropOut'|'onBeforeEditStart'|'onBeforeEditStop'|'onBeforeFilter'|'onBeforeLoad'|'onBeforeOpen'|'onBeforeRender'|'onBeforeSelect'|'onBeforeSort'|'onBeforeUnSelect'|'onBindRequest'|'onBlur'|'onCheck'|'onCollectValues'|'onColumnGroupCollapse'|'onColumnResize'|'onDataRequest'|'onDataUpdate'|'onDestruct'|'onDragOut'|'onEditorChange'|'onEnter'|'onFocus'|'onHeaderClick'|'onItemCheck'|'onItemClick'|'onItemDblClick'|'onKeyPress'|'onLiveEdit'|'onLoadError'|'onLongTouch'|'onMouseMove'|'onMouseMoving'|'onMouseOut'|'onPaste'|'onResize'|'onRowResize'|'onScrollX'|'onScrollY'|'onSelectChange'|'onStructureLoad'|'onStructureUpdate'|'onSubViewClose'|'onSubViewCreate'|'onSubViewOpen'|'onSubViewRender'|'onSwipeX'|'onSwipeY'|'onTabFocus'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onValidationError'|'onValidationSuccess'|'onViewResize'|'onViewShow';
+type treetableEventName ="onAfterAdd"|"onAfterAreaAdd"|"onAfterAreaRemove"|"onAfterBlockSelect"|"onAfterClose"|"onAfterColumnDrop"|"onAfterColumnDropOrder"|"onAfterColumnHide"|"onAfterColumnShow"|"onAfterContextMenu"|"onAfterDelete"|"onAfterDrop"|"onAfterEditStart"|"onAfterEditStop"|"onAfterFilter"|"onAfterLoad"|"onAfterOpen"|"onAfterRender"|"onAfterScroll"|"onAfterSelect"|"onAfterSort"|"onAfterUnSelect"|"onAreaDrag"|"onBeforeAdd"|"onBeforeAreaAdd"|"onBeforeAreaRemove"|"onBeforeBlockSelect"|"onBeforeClose"|"onBeforeColumnDrag"|"onBeforeColumnDrop"|"onBeforeColumnDropOrder"|"onBeforeColumnHide"|"onBeforeColumnShow"|"onBeforeContextMenu"|"onBeforeDelete"|"onBeforeDrag"|"onBeforeDragIn"|"onBeforeDrop"|"onBeforeDropOut"|"onBeforeEditStart"|"onBeforeEditStop"|"onBeforeFilter"|"onBeforeLoad"|"onBeforeOpen"|"onBeforeRender"|"onBeforeSelect"|"onBeforeSort"|"onBeforeUnSelect"|"onBindRequest"|"onBlur"|"onCheck"|"onCollectValues"|"onColumnGroupCollapse"|"onColumnResize"|"onDataRequest"|"onDataUpdate"|"onDestruct"|"onDragOut"|"onEditorChange"|"onEnter"|"onFocus"|"onHeaderClick"|"onItemCheck"|"onItemClick"|"onItemDblClick"|"onKeyPress"|"onLiveEdit"|"onLoadError"|"onLongTouch"|"onMouseMove"|"onMouseMoving"|"onMouseOut"|"onPaste"|"onResize"|"onRowResize"|"onScrollX"|"onScrollY"|"onSelectChange"|"onStructureLoad"|"onStructureUpdate"|"onSubViewClose"|"onSubViewCreate"|"onSubViewOpen"|"onSubViewRender"|"onSwipeX"|"onSwipeY"|"onTabFocus"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onValidationError"|"onValidationSuccess"|"onViewResize"|"onViewShow";
 export class treetable implements webix.ui.baseview{
 	add(obj:any, index?:number, parentId?:string):string;
 	addCellCss(id:string, name:string, css:string, silent:boolean):void;
@@ -12796,7 +12796,7 @@ interface unitlistConfig{
 	xCount?: number;
 	yCount?: number;
 }
-type unitlistEventName ='onAfterAdd'|'onAfterContextMenu'|'onAfterDelete'|'onAfterDrop'|'onAfterLoad'|'onAfterRender'|'onAfterScroll'|'onAfterSelect'|'onAfterSort'|'onBeforeAdd'|'onBeforeContextMenu'|'onBeforeDelete'|'onBeforeDrag'|'onBeforeDragIn'|'onBeforeDrop'|'onBeforeDropOut'|'onBeforeLoad'|'onBeforeRender'|'onBeforeSelect'|'onBeforeSort'|'onBindRequest'|'onBlur'|'onDataRequest'|'onDataUpdate'|'onDestruct'|'onDragOut'|'onEnter'|'onFocus'|'onItemClick'|'onItemDblClick'|'onItemRender'|'onKeyPress'|'onLoadError'|'onLongTouch'|'onMouseMove'|'onMouseMoving'|'onMouseOut'|'onPaste'|'onSelectChange'|'onSwipeX'|'onSwipeY'|'onTabFocus'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onUnits'|'onValidationError'|'onValidationSuccess'|'onViewResize'|'onViewShow';
+type unitlistEventName ="onAfterAdd"|"onAfterContextMenu"|"onAfterDelete"|"onAfterDrop"|"onAfterLoad"|"onAfterRender"|"onAfterScroll"|"onAfterSelect"|"onAfterSort"|"onBeforeAdd"|"onBeforeContextMenu"|"onBeforeDelete"|"onBeforeDrag"|"onBeforeDragIn"|"onBeforeDrop"|"onBeforeDropOut"|"onBeforeLoad"|"onBeforeRender"|"onBeforeSelect"|"onBeforeSort"|"onBindRequest"|"onBlur"|"onDataRequest"|"onDataUpdate"|"onDestruct"|"onDragOut"|"onEnter"|"onFocus"|"onItemClick"|"onItemDblClick"|"onItemRender"|"onKeyPress"|"onLoadError"|"onLongTouch"|"onMouseMove"|"onMouseMoving"|"onMouseOut"|"onPaste"|"onSelectChange"|"onSwipeX"|"onSwipeY"|"onTabFocus"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onUnits"|"onValidationError"|"onValidationSuccess"|"onViewResize"|"onViewShow";
 export class unitlist implements webix.ui.baseview{
 	add(obj:any, index?:number):string|number;
 	addCss(id:string|number, css:string, silent?:boolean):void;
@@ -12955,7 +12955,7 @@ interface uploaderConfig{
 	value?: string|number;
 	width?: number;
 }
-type uploaderEventName ='onAfterFileAdd'|'onAfterRender'|'onAfterScroll'|'onBeforeFileAdd'|'onBeforeRender'|'onBindRequest'|'onBlur'|'onDestruct'|'onEnter'|'onFileUpload'|'onFileUploadError'|'onFocus'|'onItemClick'|'onKeyPress'|'onLongTouch'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onUploadComplete'|'onViewResize'|'onViewShow';
+type uploaderEventName ="onAfterFileAdd"|"onAfterRender"|"onAfterScroll"|"onBeforeFileAdd"|"onBeforeRender"|"onBindRequest"|"onBlur"|"onDestruct"|"onEnter"|"onFileUpload"|"onFileUploadError"|"onFocus"|"onItemClick"|"onKeyPress"|"onLongTouch"|"onSwipeX"|"onSwipeY"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onUploadComplete"|"onViewResize"|"onViewShow";
 export class uploader implements webix.ui.baseview{
 	addDropZone(element:HTMLElement):void;
 	addFile(name:any, size:number, type?:string):void;
@@ -13046,7 +13046,7 @@ interface usermanagerConfig{
 	url?: string;
 	width?: number;
 }
-type usermanagerEventName ='onAfterScroll'|'onBlur'|'onDestruct'|'onEnter'|'onFocus'|'onInit'|'onLongTouch'|'onSwipeX'|'onSwipeY'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type usermanagerEventName ="onAfterScroll"|"onBlur"|"onDestruct"|"onEnter"|"onFocus"|"onInit"|"onLongTouch"|"onSwipeX"|"onSwipeY"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class usermanager implements webix.ui.baseview{
 	adjust():void;
 	app(app:any):void;
@@ -13109,7 +13109,7 @@ interface videoConfig{
 	src?: string|any[];
 	width?: number;
 }
-type videoEventName ='onAfterScroll'|'onBindRequest'|'onBlur'|'onDestruct'|'onEnter'|'onFocus'|'onKeyPress'|'onLongTouch'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize'|'onViewShow';
+type videoEventName ="onAfterScroll"|"onBindRequest"|"onBlur"|"onDestruct"|"onEnter"|"onFocus"|"onKeyPress"|"onLongTouch"|"onSwipeX"|"onSwipeY"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewResize"|"onViewShow";
 export class video implements webix.ui.baseview{
 	adjust():void;
 	bind(target:any, rule?:WebixCallback, format?:string):void;
@@ -13181,7 +13181,7 @@ interface windowConfig{
 	width?: number;
 	zIndex?: number;
 }
-type windowEventName ='onAfterScroll'|'onBeforeShow'|'onBindRequest'|'onBlur'|'onDestruct'|'onEnter'|'onFocus'|'onHide'|'onKeyPress'|'onLongTouch'|'onShow'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewMove'|'onViewMoveEnd'|'onViewResize'|'onViewShow';
+type windowEventName ="onAfterScroll"|"onBeforeShow"|"onBindRequest"|"onBlur"|"onDestruct"|"onEnter"|"onFocus"|"onHide"|"onKeyPress"|"onLongTouch"|"onShow"|"onSwipeX"|"onSwipeY"|"onTimedKeyPress"|"onTouchEnd"|"onTouchMove"|"onTouchStart"|"onViewMove"|"onViewMoveEnd"|"onViewResize"|"onViewShow";
 export class window implements webix.ui.baseview{
 	adjust():void;
 	attachEvent(type:windowEventName, functor:WebixCallback, id?:string):string|number;
