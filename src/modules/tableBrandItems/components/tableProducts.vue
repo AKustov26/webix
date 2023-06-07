@@ -68,8 +68,8 @@
 				header: "Фото",
 				width: 70,
 				template: webixRenderElement.productImage,
-				tooltip: function () {
-					return "";
+				tooltip: function (obj) {
+					return `<div class='my_image_tooltip'><img src='${obj.image}' alt='${obj.name}' /></div>`;
 				}
 			},
 			{
@@ -163,23 +163,6 @@
 			 * Записываем состояние таблицы (кол-во отображаемых столбцов) на момент загрузки
 			 */
 			stateTable.putStateTable($$(webixElName.value).getState());
-
-			/**
-			 * Инициализация библиотеки tippy с подпиской на элементы с классом webix-product-image
-			 * tippy - popover библиотека
-			 */
-			tippy(".webix-product-image", {
-				arrow: true,
-				arrowType: "round",
-				animation: "fade",
-				placement: "right",
-				content(reference) {
-					const pathImage = reference.getAttribute("data-image");
-					const image = document.createElement("img");
-					image.src = pathImage;
-					return image;
-				},
-			});
 		});
 	});
 </script>
