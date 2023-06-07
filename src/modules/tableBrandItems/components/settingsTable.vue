@@ -2,7 +2,7 @@
 // Компонент настройки отображения столбцов webix datatable элемента, наименование которого пришло в props
 // p.s. данный компонент, вне рамках задачи, может быть использован за пределами данного модуля
 import {useStateTableStore} from "@/modules/tableBrandItems/stores/stateTableBrandItems";
-import {defineProps, onMounted, ref} from "vue";
+import {onMounted, ref} from "vue";
 import utils from "@/modules/tableBrandItems/helper/utils";
 
 // store

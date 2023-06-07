@@ -1,7 +1,7 @@
 <script setup lang='ts'>
 // Компонент фильтр - показать только избранное по webix datatable элементу, наименование которого пришло в props
 // p.s. данный компонент, вне рамках задачи, может быть использован за пределами данного модуля
-import { onMounted, defineProps, ref } from "vue";
+import { onMounted, ref } from "vue";
 import type { ICustomFilterProps } from "@/modules/tableBrandItems/type/moduleType";
 import utils from "@/modules/tableBrandItems/helper/utils";
 

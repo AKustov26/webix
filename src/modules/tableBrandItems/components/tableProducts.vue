@@ -1,7 +1,7 @@
 <script setup lang="ts">
 	import {ITableData} from "@/modules/tableBrandItems/type/moduleType";
 	import {useStateTableStore} from "@/modules/tableBrandItems/stores/stateTableBrandItems";
-	import {onMounted, defineProps, defineEmits, toRefs} from "vue";
+	import {onMounted, toRefs} from "vue";
 	import * as webixRenderElement from "@/modules/tableBrandItems/helper/webixRenderElement";
 
 	// store
@@ -51,7 +51,7 @@
 				editor: "number",
 				sort: "int",
 				header: [
-					{ text: "Упущен %", content: "excelFilter", mode: "text"}
+					{ text: "Упущен %", content: "excelFilter", mode: "number"}
 				],
 			},
 			{
@@ -59,7 +59,7 @@
 				editor: "number",
 				sort: "int",
 				header: [
-					{ text: "Позиция %", content: "excelFilter", mode: "text"}
+					{ text: "Позиция %", content: "excelFilter", mode: "number"}
 				],
 			},
 			{
