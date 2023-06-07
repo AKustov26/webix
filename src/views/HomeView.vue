@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
+import { TableBrandItems } from "@/modules/tableBrandItems";
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+	  <TableBrandItems />
   </main>
 </template>
