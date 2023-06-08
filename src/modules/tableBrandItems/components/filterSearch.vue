@@ -10,16 +10,13 @@ const props = defineProps<ICustomFilterSearchProps>();
 
 // data
 const error: Ref<boolean> = ref(false);
-const optionsSearch = {
-	view:"text",
-	id: "searchGlobal",
-	width: 200,
-	placeholder:"Поиск",
-	on: {
-		onTimedKeyPress: function() {
-			$$(props.webixElName).filterByAll();
-		}
-	}
+
+// methods
+/**
+ * Обработчик события изменения состояния input по фильтру "поиск"
+ */
+const onChangeInput = () => {
+    $$(props.webixElName).filterByAll();
 };
 
 // hooks
@@ -27,7 +24,7 @@ onMounted(() => {
 	webix.ready(function () {
 		if(utils.webixElementInApp(props.webixElName)) {
 			$$(props.webixElName).registerFilter(
-				$$("searchGlobal"),
+                document.getElementById("searchFilter"),
 				{
 					columnId: props.filterColumnId,
 					compare: function (value, filter, obj) {
@@ -45,11 +42,11 @@ onMounted(() => {
 					}
 				},
 				{
-					getValue:function(list){
-						return list.getValue();
+					getValue:function(node){
+                        return node.value;
 					},
-					setValue:function(view, value){
-						view.setValue(value);
+					setValue:function(node, value){
+                        node.value = value;
 					}
 				}
 			);
@@ -59,12 +56,17 @@ onMounted(() => {
 		}
 	});
 });
+
 </script>
 
 <template>
-	<webix-ui v-if="!error" :config='optionsSearch'/>
+    <div v-if="!error" class='filter-search'>
+        <input @input="onChangeInput" type='text' id='searchFilter' placeholder='Поиск'>
+    </div>
 </template>
 
 <style scoped>
-
+.filter-search input {
+    padding: 5px 10px;
+}
 </style>

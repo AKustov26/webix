@@ -14,53 +14,31 @@ const props = defineProps<{
 }>();
 
 // data
+
+const op = ref();
 const error = ref(false);
-const optionsSettingsButton = {
-	view: "button", value: "Настройка таблицы", popup: "popupHeaderMenu", width: 170,
-};
-const optionsHeaderMenuSettings = {
-	id: "buttonHeaderMenu",
-	view: "button",
-	width: 200,
-	value: "Отображение столбцов",
-	click: function () {
-		toggleMenuSettings(this.$view);
-	}
-};
-const optionsResetButton = {
-	id: "buttonReset",
-	view: "button",
-	width: 200,
-	value: "Сбросить",
-	click: function () {
-		resetSettings();
-	}
-};
-const optionsPopup = {
-	id: "popupHeaderMenu",
-	view: "popup",
-	width: 320,
-	padding: 0,
-	point: true,
-	body: {
-		rows: [optionsHeaderMenuSettings, optionsResetButton]
-	}
-};
 
 // methods
 /**
  * Открывает/закрывает меню с настройками по отображению столбцов
  * @param node - представление
  */
-function toggleMenuSettings(node): void {
+function toggleMenuVisibleColumns(node): void {
 	const menu = $$(props.webixElName).config.headermenu;
 	if ($$(menu).isVisible()) {
-		$$(menu).hide(node);
+		$$(menu).hide(node.target);
 	} else {
-		$$(menu).show(node);
+		$$(menu).show(node.target);
 	}
 }
 
+/**
+ * Открывает/закрывает меню настроек таблицы
+ * @param event
+ */
+const toggleMenuSettings = (event) => {
+    op.value.toggle(event);
+};
 /**
  * Сбарсывает все настройка на дефлотные
  * дефолтные настройки берутся из store
@@ -82,12 +60,34 @@ onMounted(() => {
 		}
 	});
 });
-
 </script>
 
 <template>
 	<template v-if="!error">
-		<webix-ui :config='optionsSettingsButton'/>
-		<webix-ui :config='optionsPopup'/>
+        <div class="webix_secondary">
+            <button class="custom-btn webix_button" type="button" @click="toggleMenuSettings">Настройка таблицы</button>
+            <OverlayPanelItem ref="op" :dismissable="false">
+                <div class="group-button webix_secondary">
+                    <button @click="toggleMenuVisibleColumns($event)" type="button" class="custom-btn webix_button">Отображение столбцов</button>
+                    <button @click="resetSettings" type="button" class="custom-btn webix_button">Сбросить</button>
+                </div>
+            </OverlayPanelItem>
+        </div>
 	</template>
 </template>
+
+<style scoped>
+.group-button button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.group-button button:last-child {
+    margin-bottom: 0;
+}
+.custom-btn {
+    height: 38px;
+    border-width: 0;
+    padding: 0 1rem;
+}
+</style>

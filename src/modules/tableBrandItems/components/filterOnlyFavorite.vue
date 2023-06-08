@@ -10,26 +10,20 @@ const props = defineProps<ICustomFilterProps>();
 
 // data
 const error = ref(false);
-const optionsCheckbox = {
-    view: "checkbox",
-    id: "checkbox",
-    labelRight: "Только избранное",
-    width: 200,
-    labelWidth: 0,
-    value: 0,
-    on: {
-        onChange: function() {
-            $$(props.webixElName).filterByAll();
-        }
-    }
-};
 
+// methods
+/**
+ * Обработчик события изменения состояния checkbox по фильтру "только избранное"
+ */
+const onChangeCheckbox = () => {
+    $$(props.webixElName).filterByAll();
+};
 // hooks
 onMounted(() => {
     webix.ready(function() {
         if (utils.webixElementInApp(props.webixElName)) {
             $$(props.webixElName).registerFilter(
-                $$("checkbox"),
+                document.getElementById("favoriteFilter"),
                 {
                     columnId: props.filterColumnId,
                     compare: function(value, filter, obj) {
@@ -41,10 +35,10 @@ onMounted(() => {
                 },
                 {
                     getValue: function(view) {
-                        return view.getValue();
+                        return view.checked;
                     },
                     setValue: function(view, value) {
-                        view.setValue(value);
+                        view.checked = value;
                     }
                 }
             );
@@ -57,9 +51,23 @@ onMounted(() => {
 </script>
 
 <template>
-    <webix-ui v-if='!error' :config='optionsCheckbox' />
+    <div class="filter-favorite" v-if='!error'>
+        <input
+            type="checkbox"
+            id="favoriteFilter"
+            name="favorite"
+            @change="onChangeCheckbox"
+        />
+        <label for="favoriteFilter">Только избранное</label>
+    </div>
 </template>
 
 <style scoped>
-
+.filter-favorite input,
+.filter-favorite label {
+    cursor: pointer;
+}
+.filter-favorite input {
+    margin-right: 5px;
+}
 </style>
